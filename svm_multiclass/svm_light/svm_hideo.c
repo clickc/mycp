@@ -211,7 +211,7 @@ LEARN_PARM *learn_parm;
   else
     (*threshold)=0;
 
-  if(verbosity>=4) { /* really verbose */
+  ////if(verbosity>=4) { /* really verbose */
     printf("\n\n");
     eq=qp->opt_ce0[0];
     for(i=0;i<qp->opt_n;i++) {
@@ -227,7 +227,7 @@ LEARN_PARM *learn_parm;
     printf("eq-constraint=%.30f\n",eq);
     printf("b=%f\n",(*threshold));
     printf(" smallroundcount=%ld ",smallroundcount);
-  }
+ //// }
 
   return(primal);
 }
@@ -633,6 +633,8 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
     printf("before(%.30f)...after(%.30f)...result_sd(%d)...",
 	   obj_before,obj_after,result); 
   }
+   printf("before(%.30f)...after(%.30f)...result_sd(%d)...",
+           obj_before,obj_after,result);
 
   return((int)result);
 }

@@ -1194,6 +1194,19 @@ void svm_learn_optimization(DOC **docs, double *rhs, long int
       alpha[i]=a[i];
     }
   }
+
+    printf("\nmodel alpha_str: ");
+    for(i=0;i<totdoc;i++) {    /* copy final alphas */
+      printf("%ld:%lf ",i,model->alpha[i]);
+    }
+     
+    printf("\nalpha_str:");
+    for(i=0;i<totdoc;i++) {    /* copy final alphas */
+      printf("%ld:%lf ",i,alpha[i]);
+    }
+    printf("\n");
+
+
  
   if(learn_parm->alphafile[0])
     write_alphas(learn_parm->alphafile,a,label,totdoc);
@@ -1238,6 +1251,7 @@ long optimize_to_convergence(DOC **docs, long int *label, long int totdoc,
      /* heldout: marks held-out example for leave-one-out (or -1) */
      /* retrain: selects training mode (1=regular / 2=holdout) */
 {
+  printf("in in optimize_to_convergence\n");
   long *chosen,*key,i,j,jj,*last_suboptimal_at,noshrink;
   long inconsistentnum,choosenum,already_chosen=0,iteration;
   long misclassified,supvecnum=0,*active2dnum,inactivenum;
@@ -1354,10 +1368,11 @@ long optimize_to_convergence(DOC **docs, long int *label, long int totdoc,
       else {
 	chosen[j]++;
 	working2dnum[i++]=j;
+        printf("working2dum11: %ld %ld \n",i-1,j);
       }
     }
     working2dnum[i]=-1;
-
+    printf("working2dum[ %ld] is -1 \n",i);
     if(retrain == 2) {
       choosenum=0;
       for(jj=0;(j=working2dnum[jj])>=0;jj++) { /* fully clear working set */
@@ -1391,15 +1406,18 @@ long optimize_to_convergence(DOC **docs, long int *label, long int totdoc,
 	  }
 	}
       }
+      printf("begin compute index\n");
       compute_index(chosen,totdoc,working2dnum);
     }
     else {      /* select working set according to steepest gradient */
       if(iteration % 101) {
+        printf("in iteration 101\n");
         already_chosen=0;
 	if((minl(learn_parm->svm_newvarsinqp,
 		 learn_parm->svm_maxqpsize-choosenum)>=4) 
 	   && (kernel_parm->kernel_type != LINEAR)) {
 	  /* select part of the working set from cache */
+          printf("minl\n");
 	  already_chosen=select_next_qp_subproblem_grad(
 			      label,unlabeled,a,lin,c,totdoc,
 			      (long)(minl(learn_parm->svm_maxqpsize-choosenum,
@@ -1421,6 +1439,7 @@ long optimize_to_convergence(DOC **docs, long int *label, long int totdoc,
       else { /* once in a while, select a somewhat random working set
 		to get unlocked of infinite loops due to numerical
 		inaccuracies in the core qp-solver */
+         printf("in else\n");
 	choosenum+=select_next_qp_subproblem_rand(
                               label,unlabeled,a,lin,c,totdoc,
                               minl(learn_parm->svm_maxqpsize-choosenum,
@@ -1680,6 +1699,7 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
      /* c: right hand side of inequalities (margin) */
      /* maxdiff: returns maximum violation of KT-conditions */
 {
+  printf("in optimize_to_convergence_sharedslack\n");
   long *chosen,*key,i,j,jj,*last_suboptimal_at,noshrink,*unlabeled;
   long *inconsistent,choosenum,already_chosen=0,iteration;
   long misclassified,supvecnum=0,*active2dnum,inactivenum;
@@ -1820,15 +1840,17 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 	  else {
 	    chosen[j]++;
 	    working2dnum[i++]=j;
+            printf("working2dnum %ld %ld \n",i,j);
 	  }
 	}
 	working2dnum[i]=-1;
-	
+	printf("working2dum %ld is -1\n",i);
 	already_chosen=0;
 	if((minl(learn_parm->svm_newvarsinqp,
 		 learn_parm->svm_maxqpsize-choosenum)>=4) 
 	   && (kernel_parm->kernel_type != LINEAR)) {
 	  /* select part of the working set from cache */
+          printf("minl select\n");
 	  already_chosen=select_next_qp_subproblem_grad(
 			      label,unlabeled,a,lin,c,totdoc,
 			      (long)(minl(learn_parm->svm_maxqpsize-choosenum,
@@ -1839,6 +1861,7 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 			      (long)1,key,chosen);
 	  choosenum+=already_chosen;
 	}
+        printf("or select\n");
 	choosenum+=select_next_qp_subproblem_grad(
                               label,unlabeled,a,lin,c,totdoc,
                               minl(learn_parm->svm_maxqpsize-choosenum,
@@ -1848,6 +1871,7 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 			      (long)0,key,chosen);
       }
       else { /* do a step with all examples from same slack set */
+        printf("do a step with all examples from same slack set \n");
 	if(verbosity >= 2) {
 	  printf("(j-step on %ld)",slackset); fflush(stdout);
 	}
@@ -1880,6 +1904,7 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
     else { /* once in a while, select a somewhat random working set
 	      to get unlocked of infinite loops due to numerical
 	      inaccuracies in the core qp-solver */
+      printf("in else yr\n");
       choosenum+=select_next_qp_subproblem_rand(
                               label,unlabeled,a,lin,c,totdoc,
                               minl(learn_parm->svm_maxqpsize-choosenum,
@@ -2208,14 +2233,18 @@ void compute_matrices_for_optimization(DOC **docs, long int *label,
   register long ki,kj,i,j;
   register double kernel_temp;
 
+    fprintf(stdout,"Computing qp-matrices (type %ld kernel [degree %ld, rbf_gamma %f, coef_lin %f, coef_const %f])...",kernel_parm->kernel_type,kernel_parm->poly_degree,kernel_parm->rbf_gamma,kernel_parm->coef_lin,kernel_parm->coef_const);
+    fflush(stdout);
+
   if(verbosity>=3) {
     fprintf(stdout,"Computing qp-matrices (type %ld kernel [degree %ld, rbf_gamma %f, coef_lin %f, coef_const %f])...",kernel_parm->kernel_type,kernel_parm->poly_degree,kernel_parm->rbf_gamma,kernel_parm->coef_lin,kernel_parm->coef_const); 
     fflush(stdout);
   }
-
+  printf("varnum:%ld \n ",varnum);
   qp->opt_n=varnum;
   qp->opt_ce0[0]=-eq_target; /* compute the constant for equality constraint */
   for(j=1;j<model->sv_num;j++) { /* start at 1 */
+    printf("j=%ld chosen[%ld]=%ld exclude_from_eq_const=%ld model_alpha:%lf \n",j,(model->supvec[j])->docnum,chosen[(model->supvec[j])->docnum],exclude_from_eq_const[(model->supvec[j])->docnum],model->alpha[j]);
     if((!chosen[(model->supvec[j])->docnum])
        && (!exclude_from_eq_const[(model->supvec[j])->docnum])) {
       qp->opt_ce0[0]+=model->alpha[j];
@@ -2228,7 +2257,9 @@ void compute_matrices_for_optimization(DOC **docs, long int *label,
 
   /* init linear part of objective function */
   for(i=0;i<varnum;i++) {
+    printf("i=%ld keyi=%ld lin:%lf \n",i,key[i],lin[key[i]]);
     qp->opt_g0[i]=lin[key[i]];
+
   }
 
   for(i=0;i<varnum;i++) {
@@ -2240,6 +2271,7 @@ void compute_matrices_for_optimization(DOC **docs, long int *label,
     qp->opt_up[i]=learn_parm->svm_cost[ki];
 
     kernel_temp=(double)kernel(kernel_parm,docs[ki],docs[ki]); 
+    printf("kernel_temp %lf \n",kernel_temp);
     /* compute linear part of objective function */
     qp->opt_g0[i]-=(kernel_temp*a[ki]*(double)label[ki]); 
     /* compute quadratic part of objective function */
@@ -2253,6 +2285,7 @@ void compute_matrices_for_optimization(DOC **docs, long int *label,
       /* compute quadratic part of objective function */
       qp->opt_g[varnum*i+j]=(double)label[ki]*(double)label[kj]*kernel_temp;
       qp->opt_g[varnum*j+i]=(double)label[ki]*(double)label[kj]*kernel_temp;
+      printf("i=%ld j=%ld qpij=%lf qpji=%lf \n ",i,j,qp->opt_g[varnum*i+j],qp->opt_g[varnum*j+i]);
     }
 
     if(verbosity>=3) {
@@ -3058,6 +3091,7 @@ long select_next_qp_subproblem_grad(long int *label,
   choosenum=0;
   activedoc=0;
   for(i=0;(j=active2dnum[i])>=0;i++) {
+    printf("i=%ld j=%ld \n",i,j);
     s=-label[j];
     if(kernel_cache && cache_only) 
       valid=(kernel_cache->index[j]>=0);
@@ -3074,7 +3108,9 @@ long select_next_qp_subproblem_grad(long int *label,
       selcrit[activedoc]=(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
       /*      selcrit[activedoc]=(double)label[j]*(-1.0+(double)label[j]*lin[j]); */
       key[activedoc]=j;
+      printf("activedoc=%ld selcrit=%lf key=%ld \n ",activedoc,selcrit[activedoc],key[activedoc]);
       activedoc++;
+      
     }
   }
   select_top_n(selcrit,activedoc,select,(long)(qp_size/2));
@@ -3083,6 +3119,7 @@ long select_next_qp_subproblem_grad(long int *label,
       i=key[select[k]];
       chosen[i]=1;
       working2dnum[inum+choosenum]=i;
+      printf("inum=%ld choosenum=%ld i=%ld \n",inum,choosenum,i);
       choosenum+=1;
       if(kernel_cache)
 	kernel_cache_touch(kernel_cache,i); /* make sure it does not get
@@ -3108,6 +3145,7 @@ long select_next_qp_subproblem_grad(long int *label,
       selcrit[activedoc]=-(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
       /*  selcrit[activedoc]=-(double)(label[j]*(-1.0+(double)label[j]*lin[j])); */
       key[activedoc]=j;
+      printf("activedoc=%ld key=%ld \n",activedoc,key[activedoc]);
       activedoc++;
     }
   }
@@ -3117,6 +3155,7 @@ long select_next_qp_subproblem_grad(long int *label,
       i=key[select[k]];
       chosen[i]=1;
       working2dnum[inum+choosenum]=i;
+      printf("tt inum=%ld choosenum=%ld i=%ld \n",inum,choosenum,i);
       choosenum+=1;
       if(kernel_cache)
 	kernel_cache_touch(kernel_cache,i); /* make sure it does not get
@@ -3124,6 +3163,7 @@ long select_next_qp_subproblem_grad(long int *label,
       /* } */
   } 
   working2dnum[inum+choosenum]=-1; /* complete index */
+  printf("inum+choosenum=%ld\n",inum+choosenum);
   return(choosenum);
 }
 
