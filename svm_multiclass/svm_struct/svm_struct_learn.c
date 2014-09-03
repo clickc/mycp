@@ -617,12 +617,20 @@ void svm_learn_struct_joint(SAMPLE sample, STRUCT_LEARN_PARM *sparm,
       /**** compute current slack ****/
       alphasum=0;
       for(j=0;(j<cset.m);j++) 
+      {
+          printf("alpha[%ld]=%lf\n",j,alpha[j]);
 	  alphasum+=alpha[j];
+      }
       for(j=0,slack=-1;(j<cset.m) && (slack==-1);j++)  
+      {
+        printf("alpha[%ld]=%lf alphasum:%lf cset.m:%ld cset.rhs[j]=%lf ce:%lf \n",j,alpha[j],alphasum,cset.m,cset.rhs[j],classify_example(svmModel,cset.lhs[j]));
 	if(alpha[j] > alphasum/cset.m)
+         {
 	  slack=MAX(0,cset.rhs[j]-classify_example(svmModel,cset.lhs[j]));
+         }
+      }
       slack=MAX(0,slack);
-
+      printf("slack val is %lf \n ",slack);
       rt_total+=MAX(get_runtime()-rt1,0);
 
       /**** find a violated joint constraint ****/
@@ -634,11 +642,15 @@ void svm_learn_struct_joint(SAMPLE sample, STRUCT_LEARN_PARM *sparm,
 	if(struct_verbosity>=2) rt2=get_runtime();
 	update_constraint_cache_for_model(ccache, svmModel);
 	if(struct_verbosity>=2) rt_cacheupdate+=MAX(get_runtime()-rt2,0);
+        printf("epsilon_est is %lf \n ",epsilon_est);
 	/* Is there is a sufficiently violated constraint in cache? */
 	viol=compute_violation_of_constraint_in_cache(ccache,epsilon_est/2);
+        printf("viol=%lf slack=%lf epsilon_est=%lf and sparm epsilon=%lf \n",viol,slack,epsilon_est,sparm->epsilon);
+        
 	if(viol-slack > MAX(epsilon_est/10,sparm->epsilon)) { 
 	  /* There is a sufficiently violated constraint in cache, so
 	     use this constraint in this iteration. */
+          printf("There is a sufficiently violated constraint in cache\n");
 	  if(struct_verbosity>=2) rt2=get_runtime();
 	  viol=find_most_violated_joint_constraint_in_cache(ccache,
 					       epsilon_est/2,lhs_n,&lhs,&rhs);
@@ -646,6 +658,7 @@ void svm_learn_struct_joint(SAMPLE sample, STRUCT_LEARN_PARM *sparm,
 	  cached_constraint=1;
 	}
 	else {
+          printf("There is no violated constraint in cache\n");
 	  /* There is no sufficiently violated constraint in cache, so
 	     update cache by computing most violated constraint
 	     explicitly for batch_size examples. */
