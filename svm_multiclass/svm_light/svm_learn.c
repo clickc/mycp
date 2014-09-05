@@ -1853,10 +1853,14 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 	  /* select part of the working set from cache */
           printf("minl select\n");
 		  int ci;
+                  for(ci=0;ci<totdoc;ci++)
+                  {
+                     selcrit[ci]=0.0;
+                  }
 		  printf("sc_str:");
 		  for(ci=0;ci<totdoc;ci++)
 		  {
-		     printf("%ld:$lf ",ci,selcrit[ci]);
+		     printf("%ld:%lf ",ci,selcrit[ci]);
 		  }
 		  printf("\n");
 		  
@@ -3098,7 +3102,7 @@ long select_next_qp_subproblem_grad(long int *label,
   choosenum=0;
   activedoc=0;
   for(i=0;(j=active2dnum[i])>=0;i++) {
-    ////printf("i=%ld j=%ld \n",i,j);
+    printf("i=%ld j=%ld \n",i,j);
     s=-label[j];
     if(kernel_cache && cache_only) 
       valid=(kernel_cache->index[j]>=0);
@@ -3113,22 +3117,23 @@ long select_next_qp_subproblem_grad(long int *label,
        && (!inconsistent[j]))
       {
       selcrit[activedoc]=(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
-	////  printf("j=%ld label=%lf eps=%lf c=%lf lin=%lf \n",j,(double)label[j],learn_parm->eps,c[j],lin[j]);
+      
+       printf("j=%ld label=%lf eps=%lf c=%lf lin=%lf \n",j,(double)label[j],learn_parm->eps,c[j],lin[j]);
       /*      selcrit[activedoc]=(double)label[j]*(-1.0+(double)label[j]*lin[j]); */
       key[activedoc]=j;
-      ////printf("activedoc=%ld selcrit=%lf key=%ld \n ",activedoc,selcrit[activedoc],key[activedoc]);
+      printf("activedoc=%ld selcrit=%lf key=%ld \n ",activedoc,selcrit[activedoc],key[activedoc]);
       activedoc++;
       
     }
   }
-  ////printf("qp_size1:%ld activedoc=%ld \n",qp_size,activedoc);
+  printf("qp_size1:%ld activedoc=%ld \n",qp_size,activedoc);
   select_top_n(selcrit,activedoc,select,(long)(qp_size/2));
   for(k=0;(choosenum<(qp_size/2)) && (k<(qp_size/2)) && (k<activedoc);k++) {
     /* if(learn_parm->biased_hyperplane || (selcrit[select[k]] > 0)) { */
       i=key[select[k]];
       chosen[i]=1;
       working2dnum[inum+choosenum]=i;
-      ////printf("inum=%ld choosenum=%ld i=%ld k=%ld select[k]=%ld \n",inum,choosenum,i,k,select[k]);
+      printf("inum=%ld choosenum=%ld i=%ld k=%ld select[k]=%ld \n",inum,choosenum,i,k,select[k]);
       choosenum+=1;
       if(kernel_cache)
 	kernel_cache_touch(kernel_cache,i); /* make sure it does not get
@@ -3152,9 +3157,10 @@ long select_next_qp_subproblem_grad(long int *label,
        && (!inconsistent[j])) 
       {
       selcrit[activedoc]=-(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
+      
       /*  selcrit[activedoc]=-(double)(label[j]*(-1.0+(double)label[j]*lin[j])); */
       key[activedoc]=j;
-      ////printf("activedoc=%ld key=%ld \n",activedoc,key[activedoc]);
+      printf("activedoc=%ld key=%ld \n",activedoc,key[activedoc]);
       activedoc++;
     }
   }
@@ -3164,7 +3170,7 @@ long select_next_qp_subproblem_grad(long int *label,
       i=key[select[k]];
       chosen[i]=1;
       working2dnum[inum+choosenum]=i;
-      ////printf("tt inum=%ld choosenum=%ld i=%ld \n",inum,choosenum,i);
+      printf("tt inum=%ld choosenum=%ld i=%ld \n",inum,choosenum,i);
       choosenum+=1;
       if(kernel_cache)
 	kernel_cache_touch(kernel_cache,i); /* make sure it does not get
@@ -3172,7 +3178,7 @@ long select_next_qp_subproblem_grad(long int *label,
       /* } */
   } 
   working2dnum[inum+choosenum]=-1; /* complete index */
-  ////printf("inum+choosenum=%ld\n",inum+choosenum);
+  printf("inum+choosenum=%ld\n",inum+choosenum);
   return(choosenum);
 }
 
@@ -3292,33 +3298,33 @@ void select_top_n(double *selcrit, long int range, long int *select,
       ///	printf("k=%ld selcrit=%lf  select=%ld \n" ,k,selcrit[k], select[k]);
   }
 
- ////printf("n=%ld range=%ld \n",n,range);
+ printf("n=%ld range=%ld \n",n,range);
   for(i=0;(i<n) && (i<range);i++) { /* Initialize with the first n elements */
     for(j=i;j>=0;j--) {
       if((j>0) && (selcrit[select[j-1]]<selcrit[i])){
-	 //// printf("j=%ld i=%ld select=%ld selcritj=%lf selcrit=%lf\n",j,i,select[j-1],selcrit[select[j-1]],selcrit[i]);
+        printf("j=%ld i=%ld select=%ld selcritj=%lf selcrit=%lf\n",j,i,select[j-1],selcrit[select[j-1]],selcrit[i]);
 	select[j]=select[j-1];
       }
       else {
 	select[j]=i;
-	////printf("j=%ld i=%ld \n",j,i);
+	printf("j=%ld i=%ld \n",j,i);
 	j=-1;
       }
     }
   }
   if(n>0) {
     for(i=n;i<range;i++) {  
-	  ////printf("i=%ld n-1=%ld s1=%lf s2=%lf \n",i,n-1,selcrit[i],selcrit[select[n-1]]);
+      printf("i=%ld n-1=%ld select=%ld s1=%lf s2=%lf \n",i,n-1,select[n-1],selcrit[i],selcrit[select[n-1]]);
       if(selcrit[i]>selcrit[select[n-1]]) {
 	  
 	for(j=n-1;j>=0;j--) {
 	  if((j>0) && (selcrit[select[j-1]]<selcrit[i])) {
 	    select[j]=select[j-1];
-	 ////printf("n>0 j=%ld i=%ld select=%ld selcritj=%lf selcrit=%lf\n",j,i,select[j-1],selcrit[select[j-1]],selcrit[i]);	
+	    printf("n>0 j=%ld i=%ld select=%ld selcritj=%lf selcrit=%lf\n",j,i,select[j-1],selcrit[select[j-1]],selcrit[i]);	
 	  }
 	  else {
 	    select[j]=i;
-	////	printf("n>0 j=%ld i=%ld \n",j,i);
+		printf("n>0 j=%ld i=%ld \n",j,i);
 	    j=-1;
 	  }
 	}
