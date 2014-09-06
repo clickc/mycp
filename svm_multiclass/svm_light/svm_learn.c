@@ -1802,13 +1802,13 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 
     if(kernel_cache)
       kernel_cache->time=iteration;  /* for lru cache */
-    if(verbosity>=2) {
+    //if(verbosity>=2) {
       printf(
-	"Iteration %ld: ",iteration); fflush(stdout);
-    }
-    else if(verbosity==1) {
-      printf("."); fflush(stdout);
-    }
+	"\nIteration %ld: ",iteration); fflush(stdout);
+    //}
+    //else if(verbosity==1) {
+      //printf("."); fflush(stdout);
+    //}
 
     if(verbosity>=2) t0=get_runtime();
     if(verbosity>=3) {
@@ -1939,9 +1939,11 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 
     if(verbosity>=2) t2=get_runtime();
     if(jointstep) learn_parm->biased_hyperplane=1;
+	printf("epsilon_crit_org before1 %lf \n",epsilon_crit_org);
     optimize_svm(docs,label,unlabeled,ignore,eq_target,chosen,active2dnum,
 		 model,totdoc,working2dnum,choosenum,a,lin,c,learn_parm,
 		 aicache,kernel_parm,&qp,&epsilon_crit_org);
+	printf("epsilon_crit_org after1 %lf \n",epsilon_crit_org); 
     learn_parm->biased_hyperplane=0;
 
     for(jj=0;(i=working2dnum[jj])>=0;jj++)   /* recompute sums of alphas */
@@ -1993,13 +1995,13 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
     for(jj=0;(i=working2dnum[jj])>=0;jj++) {
       a_old[i]=a[i];
     }
-
+printf("epsilon_crit_org before2: %lf \n",epsilon_crit_org);
     retrain=check_optimality_sharedslack(docs,model,label,a,lin,c,
                              slack,alphaslack,totdoc,learn_parm,
 			     maxdiff,epsilon_crit_org,&misclassified,
 			     active2dnum,last_suboptimal_at,
 			     iteration,kernel_parm);
-
+printf("epsilon_crit_org after2: %lf \n",epsilon_crit_org);
     if(verbosity>=2) {
       t6=get_runtime();
       timing_profile->time_select+=t1-t0;
@@ -2048,11 +2050,13 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 	 sharedslacks */
       compute_shared_slacks(docs,label,a,lin,c,active2dnum,learn_parm,
                             slack,alphaslack);
+	 printf("epsilon_crit_org before3: %lf \n",epsilon_crit_org);			
       retrain=check_optimality_sharedslack(docs,model,label,a,lin,c,
 			     slack,alphaslack,totdoc,learn_parm,
 			     maxdiff,epsilon_crit_org,&misclassified,
 			     active2dnum,last_suboptimal_at,
 			     iteration,kernel_parm);
+	 printf("epsilon_crit_org after3: %lf \n",epsilon_crit_org);
 
       /* reset watchdog */
       bestmaxdiff=(*maxdiff);
@@ -2202,7 +2206,7 @@ void optimize_svm(DOC **docs, long int *label, long int *unlabeled,
 {
     long i;
     double *a_v;
-
+    printf("\nepsilon_crit_target before before %lf \n",*(epsilon_crit_target));
     compute_matrices_for_optimization(docs,label,unlabeled,
 				      exclude_from_eq_const,eq_target,chosen,
 				      active2dnum,working2dnum,model,a,lin,c,
@@ -2213,12 +2217,15 @@ void optimize_svm(DOC **docs, long int *label, long int *unlabeled,
       printf("Running optimizer..."); fflush(stdout);
     }
     /* call the qp-subsolver */
+	printf("\nepsilon_crit_target before %lf \n",*(epsilon_crit_target));
     a_v=optimize_qp(qp,epsilon_crit_target,
 		    learn_parm->svm_maxqpsize,
 		    &(model->b),   /* in case the optimizer gives us */
                                    /* the threshold for free. otherwise */
                                    /* b is calculated in calculate_model. */
 		    learn_parm);
+			
+	printf("\nepsilon_crit_target after %lf \n",*(epsilon_crit_target));	
     if(verbosity>=3) {         
       printf("done\n");
     }

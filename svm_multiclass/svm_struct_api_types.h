@@ -34,7 +34,7 @@
 /* default loss function: */
 # define DEFAULT_LOSS_FCT    0
 /* default optimization algorithm to use: */
-# define DEFAULT_ALG_TYPE    4
+# define DEFAULT_ALG_TYPE    3
 /* store Psi(x,y) once instead of recomputing it every time: */
 # define USE_FYCACHE         0
 /* decide whether to evaluate sum before storing vectors in constraint

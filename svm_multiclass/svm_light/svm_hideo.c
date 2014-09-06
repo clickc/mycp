@@ -99,7 +99,7 @@ LEARN_PARM *learn_parm;
   long i,j;
   int result;
   double eq,progress;
-
+  printf("epsilon_crit_trace %lf \n",(*epsilon_crit));
   roundnumber++;
 
   if(!primal) { /* allocate memory at first call */
@@ -115,7 +115,7 @@ LEARN_PARM *learn_parm;
     }
   }
 
-  if(verbosity>=4) { /* really verbose */
+  //if(verbosity>=4) { /* really verbose */
     printf("\n\n");
     eq=qp->opt_ce0[0];
     for(i=0;i<qp->opt_n;i++) {
@@ -134,8 +134,8 @@ LEARN_PARM *learn_parm;
       }
       printf(" = %f\n\n",-qp->opt_ce0[0]);
     }
-  }
-
+  //}
+printf("epsilon_crit before  %lf \n",(*epsilon_crit));
   result=optimize_hildreth_despo(qp->opt_n,qp->opt_m,
 				 opt_precision,(*epsilon_crit),
 				 learn_parm->epsilon_a,maxiter,
@@ -145,6 +145,7 @@ LEARN_PARM *learn_parm;
 				 qp->opt_g,qp->opt_g0,qp->opt_ce,qp->opt_ce0,
 				 qp->opt_low,qp->opt_up,primal,qp->opt_xinit,
 				 dual,nonoptimal,buffer,&progress);
+printf("\nepsilon_crit after %lf \n",(*epsilon_crit));
   if(verbosity>=3) { 
     printf("return(%d)...",result);
   }
@@ -163,9 +164,53 @@ LEARN_PARM *learn_parm;
     precision_violations++;
   }
 
+  
+     printf("q_str1:\n\n");
+    eq=qp->opt_ce0[0];
+    for(i=0;i<qp->opt_n;i++) {
+      eq+=primal[i]*qp->opt_ce[i];
+      printf("%f: ",qp->opt_g0[i]);
+      for(j=0;j<qp->opt_n;j++) {
+	printf("%f ",qp->opt_g[i*qp->opt_n+j]);
+      }
+      printf(": a=%.30f",primal[i]);
+      printf(": nonopti=%ld",nonoptimal[i]);
+      printf(": y=%f\n",qp->opt_ce[i]);
+    }
+    printf("eq-constraint1=%.30f\n",eq);
+    printf("b1=%f\n",(*threshold));
+    printf(" smallroundcount1=%ld \n",smallroundcount);
+	printf("opt_precision %lf \n",opt_precision);
+	printf("epsilon_crit %lf \n",(*epsilon_crit));
+	printf("learn_parm->epsilon_a %lf \n",learn_parm->epsilon_a);
+	printf("maxiter=%ld\n",(long)maxiter);
+	printf("lindep_sensitivity=%lf\n",lindep_sensitivity);
+	int p; 
+	printf("primal_str:");
+	for(p=0;p<nx;p++)
+	{
+	  printf("%d:%lf ",p,primal[p]);
+	}
+    printf("\n");
+   
+   	printf("dual_str:");
+	for(p=0;p<2*(nx+1);p++)
+	{
+	  printf("%d:%lf ",p,dual[p]);
+	}
+    printf("\n");
+	
+    printf("nonoptimal_str:");
+	for(p=0;p<nx;p++)
+	{
+	  printf("%d:%lf ",p,nonoptimal[p]);
+	}
+    printf("\n");
+  
   /* take one round of only two variable to get unstuck */
+  printf("result=%d PRIMAL_OPTIMAL=%d roundnumber=%ld progress=%lf \n",result,PRIMAL_OPTIMAL,roundnumber,progress);
   if((result != PRIMAL_OPTIMAL) || (!(roundnumber % 31)) || (progress <= 0)) {
-
+    printf("result is not PRIMAL_OPTIMAL\n");
     smallroundcount++;
 
     result=optimize_hildreth_despo(qp->opt_n,qp->opt_m,
@@ -212,7 +257,7 @@ LEARN_PARM *learn_parm;
     (*threshold)=0;
 
   ////if(verbosity>=4) { /* really verbose */
-    printf("\n\n");
+    printf("q_str2:\n\n");
     eq=qp->opt_ce0[0];
     for(i=0;i<qp->opt_n;i++) {
       eq+=primal[i]*qp->opt_ce[i];
@@ -226,7 +271,7 @@ LEARN_PARM *learn_parm;
     }
     printf("eq-constraint=%.30f\n",eq);
     printf("b=%f\n",(*threshold));
-    printf(" smallroundcount=%ld ",smallroundcount);
+    printf(" smallroundcount=%ld \n",smallroundcount);
  //// }
 
   return(primal);
