@@ -554,6 +554,16 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
     else
       lswitchrk_matrix(d,n,b2,(long)1); 
   }
+  
+  printf("lin_dependent_str1:");
+  int q;
+  for(q=0;q<n;q++)
+  {
+     printf("%d:%ld ",q, lin_dependent[q]);
+  }
+  printf("\n");
+  
+  printf("m=%ld smallroundcount=%ld \n",m,smallroundcount);
   if(smallround == SMALLROUND) {
     for(i=2;i<n;i++) {
       lin_dependent[i]=1;
@@ -573,6 +583,14 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
     }
   }
   linvert_matrix(d,n,ig,lindep_sensitivity,lin_dependent);
+  
+  printf("lin_dependent_str2:");
+  for(q=0;q<n;q++)
+  {
+     printf("%d:%ld ",q,lin_dependent[q]);
+  }
+  printf("\n");
+  
   if(n>2) {                    /* now switch back */
     if(b2 == 0) {
       lswitchrk_matrix(ig,n,b1,(long)1); 
@@ -594,6 +612,13 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
   /* lprint_matrix(d,n); */
   /* lprint_matrix(ig,n); */
 
+   printf("lin_dependent_str3:");
+  for(q=0;q<n;q++)
+  {
+     printf("%d:%ld ",q,lin_dependent[q]);
+  }
+  printf("\n");
+  
   lcopy_matrix(g,n,g_new);   /* restore g_new matrix */
   if(add>0)
     for(j=0;j<n;j++) {
@@ -604,6 +629,7 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
 
   for(i=0;i<n;i++) {  /* fix linear dependent vectors */
     g0_new[i]=g0[i]+add*ce0[0]*ce[i];
+	printf("g0_new[%ld]=%lf \n",i,g0_new[i]);
   }
   if(m>0) ce0_new[0]=-ce0[0];
   for(i=0;i<n;i++) {  /* fix linear dependent vectors */
@@ -611,6 +637,7 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
       for(j=0;j<n;j++) {
 	if(!lin_dependent[j]) {
 	  g0_new[j]+=start[i]*g_new[i*n+j];
+	  printf("lin g0_new[%ld]=%lf \n",j,g0_new[j]);
 	}
       }
       if(m>0) ce0_new[0]-=(start[i]*ce[i]);
@@ -651,6 +678,115 @@ int optimize_hildreth_despo(n,m,precision,epsilon_crit,epsilon_a,maxiter,goal,
   }
 
   if((!changed) || (n_indep>1)) { 
+    printf("n_indep %ld \n",n_indep);
+    printf("m %ld \n",m);
+    printf("precision %lf \n",precision);
+	printf("epsilon_crit %lf \n",epsilon_crit);
+	printf("maxiter %ld \n",maxiter);
+    int p;
+	printf("g_new_str:");
+    for(p=0;p<n*n;p++)
+	{
+	   printf("%d:%lf ",p,g_new[p]);
+	}
+	printf("\n");
+  
+  	printf("g0_new_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,g0_new[p]);
+	}
+	printf("\n");
+	
+	
+    printf("ce_new_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,ce_new[p]);
+	}
+	printf("\n");
+	
+	
+    printf("ce0_new_str:");
+    for(p=0;p<m;p++)
+	{
+	   printf("%d:%lf ",p,ce0_new[p]);
+	}
+	printf("\n");
+	
+	
+	printf("low_new_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,low_new[p]);
+	}
+	printf("\n");
+	
+	
+    printf("up_new_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,up_new[p]);
+	}
+	printf("\n");
+	
+    printf("primal_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,primal[p]);
+	}
+	printf("\n");
+
+    printf("d_str:");
+    for(p=0;p<(n+m)*2*(n+m)*2;p++)
+	{
+	   printf("%d:%lf ",p,d[p]);
+	}
+	printf("\n");
+
+
+    printf("d0_str:");
+    for(p=0;p<(n+m)*2;p++)
+	{
+	   printf("%d:%lf ",p,d0[p]);
+	}
+	printf("\n");
+
+
+    printf("ig_str:");
+    for(p=0;p<n*n;p++)
+	{
+	   printf("%d:%lf ",p,ig[p]);
+	}
+	printf("\n");	
+	
+	 printf("dual_str:");
+    for(p=0;p<(n+m)*2;p++)
+	{
+	   printf("%d:%lf ",p,dual[p]);
+	}
+	printf("\n");
+	
+	
+	 printf("dual_old_str:");
+    for(p=0;p<(n+m)*2;p++)
+	{
+	   printf("%d:%lf ",p,dual_old[p]);
+	}
+	printf("\n");
+	
+	
+	
+	printf("temp_str:");
+    for(p=0;p<n;p++)
+	{
+	   printf("%d:%lf ",p,temp[p]);
+	}
+	printf("\n");
+	
+  printf("goal %ld \n",goal);
+  
+  
     result=solve_dual(n_indep,m,precision,epsilon_crit,maxiter,g_new,g0_new,
 		      ce_new,ce0_new,low_new,up_new,primal,d,d0,ig,
 		      dual,dual_old,temp,goal);
@@ -704,6 +840,7 @@ int solve_dual(n,m,precision,epsilon_crit,maxiter,g,g0,ce,ce0,low,up,primal,
      double *d,*d0,*ig,*dual,*dual_old,*temp;       /* buffer  */
      long goal;
 {
+  printf("in slove dual \n");
   long i,j,k,iter;
   double sum,w,maxviol,viol,temp1,temp2,isnantest;
   double model_b,dist;
