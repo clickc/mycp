@@ -1799,7 +1799,12 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 
                             /* repeat this loop until we have convergence */
   for(;retrain && (!terminate);iteration++) {
-
+    int cci;
+    for(cci=0;cci<totdoc;cci++)
+    {
+         selcrit[cci]=0.0;
+     }
+				  
     if(kernel_cache)
       kernel_cache->time=iteration;  /* for lru cache */
     //if(verbosity>=2) {
@@ -1824,6 +1829,7 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
     if(iteration % 101) {
       slackset=select_next_qp_slackset(docs,label,a,lin,slack,alphaslack,c,
 				       learn_parm,active2dnum,&maxsharedviol);
+      printf("slackset=%ld maxsharedviol=%lf learn_parm->epsilon_crit=%lf \n",slackset,maxsharedviol,learn_parm->epsilon_crit);					   
       if((!(iteration % 100))
 	 || (!slackset) || (maxsharedviol<learn_parm->epsilon_crit)){
 	/* do a step with examples from different slack sets */
@@ -1853,10 +1859,12 @@ long optimize_to_convergence_sharedslack(DOC **docs, long int *label,
 	  /* select part of the working set from cache */
           printf("minl select\n");
 		  int ci;
+		       /*
                   for(ci=0;ci<totdoc;ci++)
                   {
                      selcrit[ci]=0.0;
                   }
+				 */ 
 		  printf("sc_str:");
 		  for(ci=0;ci<totdoc;ci++)
 		  {
@@ -2536,23 +2544,29 @@ long check_optimality_sharedslack(DOC **docs, MODEL *model, long int *label,
   (*maxdiff)=0;
   (*misclassified)=0;
   for(ii=0;(i=active2dnum[ii])>=0;ii++) {
+    
     /* 'distance' from hyperplane*/
     dist_noslack=(lin[i]-model->b)*(double)label[i];
     dist=dist_noslack+slack[docs[i]->slackid];
     target=-(learn_parm->eps-(double)label[i]*c[i]);
     ex_c=learn_parm->svm_c-learn_parm->epsilon_a;
+	 printf("ii=%ld i=%ld a=%lf c=%lf label=%ld lin=%lf epsilon_a=%lf dist=%lf target=%lf maxdiff=%lf ex_c=%lf \n",ii,i,a[i],c[i],label[i],lin[i],learn_parm->epsilon_a,dist,target,*maxdiff,ex_c);
     if((a[i]>learn_parm->epsilon_a) && (dist > target)) {
       if((dist-target)>(*maxdiff)) {  /* largest violation */
 	(*maxdiff)=dist-target;
-	if(verbosity>=5) printf("sid %ld: dist=%.2f, target=%.2f, slack=%.2f, a=%f, alphaslack=%f\n",docs[i]->slackid,dist,target,slack[docs[i]->slackid],a[i],alphaslack[docs[i]->slackid]);
-	if(verbosity>=5) printf(" (single %f)\n",(*maxdiff));
+	//if(verbosity>=5) 
+	printf("sid %ld: dist=%.2f, target=%.2f, slack=%.2f, a=%f, alphaslack=%f\n",docs[i]->slackid,dist,target,slack[docs[i]->slackid],a[i],alphaslack[docs[i]->slackid]);
+	//if(verbosity>=5)
+	printf(" (single %f)\n",(*maxdiff));
       }
     }
     if((alphaslack[docs[i]->slackid]<ex_c) && (slack[docs[i]->slackid]>0)) {
       if((slack[docs[i]->slackid])>(*maxdiff)) { /* largest violation */
 	(*maxdiff)=slack[docs[i]->slackid];
-	if(verbosity>=5) printf("sid %ld: dist=%.2f, target=%.2f, slack=%.2f, a=%f, alphaslack=%f\n",docs[i]->slackid,dist,target,slack[docs[i]->slackid],a[i],alphaslack[docs[i]->slackid]);
-	if(verbosity>=5) printf(" (joint %f)\n",(*maxdiff));
+	//if(verbosity>=5) 
+	printf("sid %ld: dist=%.2f, target=%.2f, slack=%.2f, a=%f, alphaslack=%f\n",docs[i]->slackid,dist,target,slack[docs[i]->slackid],a[i],alphaslack[docs[i]->slackid]);
+	//if(verbosity>=5) 
+	printf(" (joint %f)\n",(*maxdiff));
       }
     }
     /* Count how long a variable was at lower/upper bound (and optimal).*/
@@ -2589,13 +2603,20 @@ void compute_shared_slacks(DOC **docs, long int *label,
 
   for(jj=0;(i=active2dnum[jj])>=0;jj++) { /* clear slack variables */
     slack[docs[i]->slackid]=0.0;
+	printf("jj =%ld i=%ld slackid=%ld \n",jj,i,docs[i]->slackid);
     /*    alphaslack[docs[i]->slackid]=0.0; */
   }
   for(jj=0;(i=active2dnum[jj])>=0;jj++) { /* recompute slack variables */
     dist=(lin[i])*(double)label[i];
     target=-(learn_parm->eps-(double)label[i]*c[i]);
-    if((target-dist) > slack[docs[i]->slackid])
+	printf("jj=%ld i=%ld lin=%lf dist=%lf c=%lf eps=%lf target=%lf slack=%lf \n",jj,i,lin[i],dist,c[i],learn_parm->eps,target,slack[docs[i]->slackid]);
+	
+    if(((target-dist) > slack[docs[i]->slackid])&&fabs(target-dist)>(double)(0.5))
+	{
       slack[docs[i]->slackid]=target-dist;
+	  printf("jj=%ld i=%ld slackid=%ld slack=%lf \n",jj,i,docs[i]->slackid,slack[docs[i]->slackid]);
+	}
+	
     /*    alphaslack[docs[i]->slackid]+=a[i]; */
   }
 }
@@ -3127,10 +3148,12 @@ long select_next_qp_subproblem_grad(long int *label,
       
        printf("j=%ld label=%lf eps=%lf c=%lf lin=%lf \n",j,(double)label[j],learn_parm->eps,c[j],lin[j]);
       /*      selcrit[activedoc]=(double)label[j]*(-1.0+(double)label[j]*lin[j]); */
-      key[activedoc]=j;
-      printf("activedoc=%ld selcrit=%lf key=%ld \n ",activedoc,selcrit[activedoc],key[activedoc]);
-      activedoc++;
-      
+	          printf("activedoc=%ld selcrit=%lf key=%ld \n ",activedoc,selcrit[activedoc],key[activedoc]);
+	  if(fabs(selcrit[activedoc])>0.5)
+	  {
+        key[activedoc]=j;
+        activedoc++;
+      }
     }
   }
   printf("qp_size1:%ld activedoc=%ld \n",qp_size,activedoc);
@@ -3163,12 +3186,15 @@ long select_next_qp_subproblem_grad(long int *label,
        && (label[j])
        && (!inconsistent[j])) 
       {
-      selcrit[activedoc]=-(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
+        selcrit[activedoc]=-(double)label[j]*(learn_parm->eps-(double)label[j]*c[j]+(double)label[j]*lin[j]);
       
       /*  selcrit[activedoc]=-(double)(label[j]*(-1.0+(double)label[j]*lin[j])); */
-      key[activedoc]=j;
-      printf("activedoc=%ld key=%ld \n",activedoc,key[activedoc]);
-      activedoc++;
+	          printf("activedoc=%ld key=%ld \n",activedoc,key[activedoc]);
+	   if(fabs(selcrit[activedoc])>0.5)
+	   {
+        key[activedoc]=j;
+        activedoc++;
+	  }
     }
   }
   select_top_n(selcrit,activedoc,select,(long)(qp_size/2));
