@@ -1,0 +1,271 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Minica.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Key.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 312, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于精灵加密系统(DES) "
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,17,221,21,21
+    LTEXT           "",IDC_DISPLAY_STATIC,17,15,278,189,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    LTEXT           "DES1.0 版",IDC_STATIC,51,215,42,17
+    LTEXT           "版权所有 (C) 2004",IDC_STATIC,105,215,82,18
+    LTEXT           "广工主页：",IDC_STATIC,15,247,42,15
+    LTEXT           "http://www.gdut.edu.cn",IDC_NEUHOMEPAGE_STATIC,64,245,
+                    93,18
+    LTEXT           "我的信箱：",IDC_STATIC,14,263,44,13
+    LTEXT           "jilin163@21cn.com",IDC_MYEMAIL_STATIC,65,265,85,13
+    PUSHBUTTON      "确定",IDOK,240,263,54,15,BS_FLAT
+END
+
+IDD_MINICA_DIALOG DIALOGEX 0, 0, 315, 295
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MiniCaSystem"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "输入/输出",IDC_STATIC,7,7,300,95
+    LTEXT           "输入文件",IDC_STATIC,13,21,32,13
+    EDITTEXT        IDC_Input,47,21,201,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览文件",IDC_Browse,255,21,46,15,BS_FLAT
+    LTEXT           "输出文件",IDC_STATIC,13,45,32,13
+    EDITTEXT        IDC_Output,47,45,201,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "选择目录",IDC_OutFolder,255,45,46,15,BS_FLAT
+    CONTROL         "使用默认路径",IDC_DefPathCHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,22,67,64,10
+    LTEXT           "默认路径",IDC_DEFPATHSTATIC,47,81,32,13,WS_DISABLED
+    EDITTEXT        IDC_DefPath,86,82,164,15,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "打开文件",IDC_Open,255,64,46,15,BS_FLAT
+    PUSHBUTTON      "浏览目录",IDC_DefFolder,255,82,46,15,BS_FLAT | 
+                    WS_DISABLED
+    GROUPBOX        "DES",IDC_STATIC,7,111,299,55
+    LTEXT           "DES 密钥",IDC_STATIC,13,125,33,14
+    LTEXT           "确认密钥",IDC_STATIC,13,145,33,14
+    EDITTEXT        IDC_DesKey,55,125,65,16,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DesKey2,55,145,66,16,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "(1-16个任意字符，区分大小写)\n当密钥长度超过8时，系统将自动使用3次DES加密，此时保密性增加，但速度降为1次DES的1/3",
+                    IDC_STATIC,133,125,168,33
+    GROUPBOX        "选项",IDC_STATIC,7,178,298,36
+    CONTROL         "加密后删除原文件",IDC_DelOrgFileCHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,192,80,10
+    CONTROL         "解密后删除加密文件",IDC_DelEptFileCHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,192,88,10
+    CONTROL         "删除前提示",IDC_DelNoteCHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,228,192,56,10
+    PUSHBUTTON      "加密",IDC_Run,27,255,52,13,BS_FLAT
+    PUSHBUTTON      "关于",IDC_ABOUT,119,255,52,13,BS_FLAT
+    PUSHBUTTON      "退出",ID_EXIT,223,255,52,13,BS_FLAT
+    LTEXT           "",IDC_Credit,12,274,296,9,SS_SUNKEN
+    GROUPBOX        "数字标签",IDC_STATIC,7,221,298,31
+    EDITTEXT        IDC_EDIT_DEST,58,231,179,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "MD5数字签字",IDC_BUTTON_RESULT,245,231,52,13,BS_FLAT
+    LTEXT           "签字内容",IDC_STATIC,15,233,39,13
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Minica Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Minica\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Minica.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Minica 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 286
+    END
+
+    IDD_MINICA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 286
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR  DISCARDABLE     "res\\Hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BKBITMAP1           BITMAP  DISCARDABLE     "res\\bk5.BMP"
+IDB_BKBITMAP2           BITMAP  DISCARDABLE     "res\\bk2.BMP"
+IDB_BKBITMAP3           BITMAP  DISCARDABLE     "res\\bk3.BMP"
+IDB_BKBITMAP4           BITMAP  DISCARDABLE     "res\\bk4.BMP"
+IDB_BKBITMAP5           BITMAP  DISCARDABLE     "res\\bk1.BMP"
+BITMAPCITY              BITMAP  DISCARDABLE     "res\\city.BMP"
+BITMAPBADGENAME         BITMAP  DISCARDABLE     "res\\badgename.BMP"
+BITMAPBADGE             BITMAP  DISCARDABLE     "res\\badge.BMP"
+BITMAPZHULOU            BITMAP  DISCARDABLE     "res\\Zhulou.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Minica(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Minica.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
