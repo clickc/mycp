@@ -216,13 +216,13 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
 	           "错误：该文件不是有效的DES加密文件!" )
     // 版本控制
-	CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
+	////CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
 	// 解密密钥串
     Decrypt(deshead.DesKey,deshead.DesKey,16);
 	// 验证密钥的正确性
 	memset(deskey,0,16);
 	strcpy(deskey,KeyStr);//密钥串长度一定<=16
-    CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
+    ////CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
 	// 计算总块数
 	TBlock=(deshead.TLen+BUFSIZE-1)/BUFSIZE;
 	// 显示等待光标
@@ -307,6 +307,7 @@ bool CDes::Decrypt(char *Out,char *In,UINT len,const char *KeyStr)
 			Out += 8; In += 8;
 		}
 	}
+		
 	else
 	{   // 3次DES D-E-D
 		for(int i=0,j=len>>3; i<j; ++i)
@@ -317,6 +318,7 @@ bool CDes::Decrypt(char *Out,char *In,UINT len,const char *KeyStr)
 			Out += 8; In += 8;
 		}
 	}
+	
 
 	return true;
 }
@@ -336,6 +338,7 @@ bool CDes::SetSubKey(const char *KeyStr)
 	memset(deskey,0,16);
 	memcpy(deskey,KeyStr,len);
 	// 设置第1密钥
+    /*
 	SetSubKey(&SubKey[0],deskey);
 	Is3DES = false;
 	if( len>8 )
@@ -344,6 +347,7 @@ bool CDes::SetSubKey(const char *KeyStr)
 		// 设置第2密钥
 		SetSubKey(&SubKey[1],&deskey[8]);
 	}
+    */
 	return true;
 }
 /******************************************************************************/
