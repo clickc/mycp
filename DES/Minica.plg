@@ -6,13 +6,22 @@
 --------------------Configuration: Minica - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
+<<<<<<< HEAD
 Creating temporary file "C:\Users\lq\AppData\Local\Temp\RSPD668.tmp" with contents
+=======
+Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSPCAEA.tmp" with contents
+>>>>>>> origin/master
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Minica.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "D:\projects\clickc_win_workplace\mycp\DES\Des.cpp"
 ]
+<<<<<<< HEAD
 Creating command line "cl.exe @C:\Users\lq\AppData\Local\Temp\RSPD668.tmp" 
 Creating temporary file "C:\Users\lq\AppData\Local\Temp\RSPD669.tmp" with contents
+=======
+Creating command line "cl.exe @C:\Users\zkyz\AppData\Local\Temp\RSPCAEA.tmp" 
+Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSPCAEB.tmp" with contents
+>>>>>>> origin/master
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Minica.pdb" /debug /machine:I386 /out:"Debug/Minica.exe" /pdbtype:sept 
 .\Debug\AboutDlg.obj
@@ -29,10 +38,18 @@ Creating temporary file "C:\Users\lq\AppData\Local\Temp\RSPD669.tmp" with conten
 .\Debug\Window.obj
 .\Debug\Minica.res
 ]
+<<<<<<< HEAD
 Creating command line "link.exe @C:\Users\lq\AppData\Local\Temp\RSPD669.tmp"
 <h3>Output Window</h3>
 Compiling...
 Des.cpp
+=======
+Creating command line "link.exe @C:\Users\zkyz\AppData\Local\Temp\RSPCAEB.tmp"
+<h3>Output Window</h3>
+Compiling...
+Des.cpp
+d:\projects\clickc_win_workplace\mycp\des\cc.h(233) : warning C4700: local variable 'tempB' used without having been initialized
+>>>>>>> origin/master
 Linking...
 
 
