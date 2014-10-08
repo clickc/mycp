@@ -186,10 +186,14 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	CWindow::ShowMessage(deskey);
     sprintf(s,"size deskey is %d",sizeof(deskey));  
     CWindow::ShowMessage(s);
-
-	Encrypt(deshead.DesKey,deskey,16);
+    U08 ke[5]="blue";
+	U08 *te=(U08 *)deskey;
+	 U08 outdata[sizeof(deskey)] = {0};
+	//Encrypt(deshead.DesKey,deskey,16);
+    CurCalc_DES_Encrypt(ke,te, outdata);
+	//strcpy(deshead.DesKey,outdata);
 		char sss[8];
-    sprintf(sss,"0x%x",deshead.DesKey);  
+    sprintf(sss,"encode: %s ",outdata);  
 		CWindow::ShowMessage(sss);
 	// 写入信息头
 	_lwrite(fh_out,(char*)&deshead,sizeof(deshead));
@@ -230,23 +234,21 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
 	           "错误：该文件不是有效的DES加密文件!" )
     // 版本控制
-<<<<<<< HEAD
-	////CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
-=======
+
     //CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
->>>>>>> origin/master
+
 	// 解密密钥串
     Decrypt(deshead.DesKey,deshead.DesKey,16);
 	// 验证密钥的正确性
 	memset(deskey,0,16);
 	strcpy(deskey,KeyStr);//密钥串长度一定<=16
-<<<<<<< HEAD
+
     ////CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
-=======
+
 	CWindow::ShowMessage(deshead.DesKey);
     CWindow::ShowMessage(deskey);
     CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
->>>>>>> origin/master
+
 	// 计算总块数
 	TBlock=(deshead.TLen+BUFSIZE-1)/BUFSIZE;
 	// 显示等待光标
