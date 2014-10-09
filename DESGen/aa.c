@@ -82,6 +82,9 @@ typedef union                    //          |
 #define PC1_TABLE	4
 #define PC2_TABLE	5
 
+   U08 batch[8]={0};
+   U08 cipher[8]={0};
+
 typedef struct
 {
 	unsigned char L[32];
@@ -159,6 +162,11 @@ void LShift(unsigned char *buf28, int nShift);
 void fFunction(unsigned char *R, unsigned char*K, unsigned char *result);
 void S_Change(unsigned char *src, unsigned char *result);
 void SelectExchangeFromTable(int nTable, unsigned char *src, unsigned char *dst);
+
+//加密整个字符串，每8个char调用一次加密算法，输出加密后的整个串
+void EncryptString(unsigned char * src,unsigned char *dest,unsigned char *key);
+
+void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key);
 
 int substring(unsigned char * s,int start,int len,unsigned char * t)
 {
@@ -456,32 +464,149 @@ void CurCalc_DES_Decrypt( U08 *inkey, U08 *indata, U08 *outdata )
 
 }
 
+
+void EncryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
+{
+   printf("key:%s \n",key);
+   //U08 batch[8]={0};
+   //U08 cipher[8]={0};
+
+   int k=0,i=0,m=0;
+
+   dest=(U08 *)malloc(strlen(src));   
+    
+   for(i=0;i<(strlen(src)-8);i+=8)
+   {
+     substring(src,i,8,batch);
+     CurCalc_DES_Encrypt(key,batch, cipher);
+     
+         
+     for(m=0;m<8;m++)
+     {
+       if((int)cipher[m]>0)
+       {
+         dest[k++]=cipher[m];
+         printf("i= %d batch[%d]=%d dest[%d]=%d \n",i,m,(int)batch[m],m,(int)cipher[m]);
+       }
+     }  
+     printf("i:%d dest.length:%d \n",i,strlen(dest));
+   }
+    
+   for(m=0;m<8;m++)
+   {
+    batch[m]=0;
+    cipher[m]=0;
+   }
+
+   substring(src,i,(strlen(src)-i),batch);
+   CurCalc_DES_Encrypt(key,batch,cipher);
+
+   for(m=0;m<=(strlen(src)-i);m++)
+   {
+        if((int)cipher[m]>0)
+        {
+          dest[k++]=cipher[m];
+        }
+   }
+
+  for(m=0;m<strlen(src);m++)
+  {
+    printf("src[%d]=%d dest[%d]=%d \n",m,src[m],m,dest[m]);
+  }
+    
+  printf("ii:%d k:%d dest.length:%d \n",i,k,strlen(dest));
+
+  printf("dest:%s \n",dest);
+
+  unsigned char *out="test";
+  DecryptString(dest,out,key);
+  
+
+}
+
+void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
+{
+    
+    //U08 cipher[8]={0};
+    //U08 batch[8]={0};
+
+    int k=0,i=0,m=0;
+
+    dest=(U08 *)malloc(strlen(src));
+    printf("src.length:%d \n",strlen(src));
+
+    for(i=0;i<(strlen(src)-8);i+=8)
+    {
+      substring(src,i+1,8,cipher);
+      CurCalc_DES_Decrypt(key,cipher, batch);
+
+      for(m=0;m<8;m++)
+      {
+        if((int)batch[m]>0)
+        { 
+         dest[k++]=batch[m];
+        }
+      }
+    }
+
+   for(m=0;m<8;m++)
+   {
+    batch[m]=0;
+    cipher[m]=0;
+   }
+
+   substring(src,i,(strlen(src)-i),cipher);
+   CurCalc_DES_Decrypt(key,cipher,batch);
+
+   for(m=0;m<=(strlen(src)-i);m++)
+   {
+        if((int)batch[m]>0)
+        {
+          dest[k++]=batch[m];
+        }
+   }
+   printf("dest2:%s \n",dest);   
+
+}
  
 
 int main(void)
 {
    // FILE *fp = NULL;
    
-   U08 outdata[255] = {0};
-   U08 putdata[255]={0};
+   //U08 outdata[8] = {0};
+   //U08 putdata[8]={0};
    U08 *ke="12345678";
    U08 *te="this is a test 将一个数进行合并与斥开非常高效的方法";
    //U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
    printf("str.len:%d \n",strlen(te)); 
+
+       
+   U08* outdata=(U08 *)malloc(strlen(te));
+   U08* putdata=(U08 *)malloc(strlen(te));
+
+   EncryptString(te,outdata,ke);
+  
+   printf("outdata:%s \n",outdata);
+   DecryptString(outdata,putdata,ke);
+ 
+   printf("putdata:%s \n",putdata);
+   
+
+   /*
    int i=0;
   
    U08 *tee=(U08 *)malloc(8);
    
-
-   U08 *alldata=(U08 *)malloc(20*strlen(te));
+   U08 *allendata=(U08 *)malloc(strlen(te));
+   U08 *alldata=(U08 *)malloc(strlen(te));
    int k=0;
    int m=0;
    for(i=0;i<(strlen(te)-8);i+=8)
    {
       
       substring(te,i,8,tee);
-      
-     
+           
       CurCalc_DES_Encrypt(ke,tee, outdata);
       CurCalc_DES_Decrypt("12345678",outdata,putdata);
       printf("i=%d p=%s \n ",i,putdata);
@@ -490,6 +615,7 @@ int main(void)
       {
         if((int)putdata[m]>0)
         {
+          allendata[k]=outdata[m];
           alldata[k++]=putdata[m]; 
         }
       }
@@ -512,14 +638,20 @@ int main(void)
    {
         if((int)putdata[m]>0)
         {
+          allendata[k]=outdata[m];
           alldata[k++]=putdata[m];
         }
    }
+  
+   for(m=0;m<strlen(te);m++)
+   {
+      printf("allendata[%d]=%d alldata[%d]=%d \n",m,(int)allendata[m],m,(int)alldata[m]);
+   }
 
-
-
+   printf("allendata: %s \n",allendata);
    printf("alldata: %s \n",alldata);
-
+  */
+  
     return 0;
 }
 
