@@ -184,32 +184,6 @@ int substring(unsigned char * s,int start,int len,unsigned char * t)
 }
 
 
-int substringencn(unsigned char * s,int start,int len,unsigned char * t)
-{
-
-   int i=0,j=0;
-   while(s[i])
-      i++;
-
-   if(i<start)
-      return -1;
-   else if(i<start+len)
-      return -2;
-   else
-   {
-     for(i=start-1;i<=start+len-2;i++)
-     {
-       t[j]=s[i];
-       printf(" s[%d]=%d ",i,(int)s[i]);
-       j++;
-     }
-     printf("\n");
-     t[j]='\0';
-     return 1;
-   }
-
-}
-
 
 void BitToByte(unsigned char *src, unsigned char *dst, int n)
 {
@@ -484,12 +458,12 @@ void CurCalc_DES_Decrypt( U08 *inkey, U08 *indata, U08 *outdata )
 int main(void)
 {
    // FILE *fp = NULL;
-    //char outdata[255] = {0};
-    //char putdata[255]={0};
-    U08 outdata[255] = {0};
-    U08 putdata[255]={0};
-    U08 *ke="12345678";
-    U08 *te="this is a test 将一个数进行合并与斥开非常高效的方法";
+   //char outdata[255] = {0};
+   //char putdata[255]={0};
+   U08 outdata[255] = {0};
+   U08 putdata[255]={0};
+   U08 *ke="12345678";
+   U08 *te="this is a test 将一个数进行合并与斥开非常高效的方法";
    // U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
    printf("str.len:%d \n",strlen(te)); 
    int i=0;
@@ -521,10 +495,10 @@ int main(void)
    U08 *tee=(U08 *)malloc(8);
    
 
-   U08 *alldata=(U08 *)malloc(10*strlen(te));
+   U08 *alldata=(U08 *)malloc(20*strlen(te));
    int k=0;
    int m=0;
-   for(i=0;i<strlen(te);i+=8)
+   for(i=0;i<(strlen(te)+10);i+=8)
    {
       substring(te,i,8,tee);
       CurCalc_DES_Encrypt(ke,tee, outdata);
@@ -541,7 +515,7 @@ int main(void)
       printf("\n");
    }
 
-   printf("alldata is %s \n",alldata);
+   printf("alldata: %s \n",alldata);
 
   //// CurCalc_DES_Decrypt("12345678",outdata,putdata);
   //// printf("%s\n",putdata);
