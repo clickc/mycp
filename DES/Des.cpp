@@ -187,29 +187,40 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
     sprintf(s,"size deskey is %d",sizeof(deskey));  
     CWindow::ShowMessage(s);
     U08 ke[5]="blue";
-	U08 *te=(U08 *)deskey;
-	 U08 outdata[sizeof(deskey)] = {0};
+	U08 *te=(U08 *)malloc(BUFSIZE);
+	U08 *outdata = (U08 *)malloc(2*BUFSIZE);
+	U08 *output =(U08 *)malloc(2*BUFSIZE);
 	//Encrypt(deshead.DesKey,deskey,16);
-    CurCalc_DES_Encrypt(ke,te, outdata);
+    ////CurCalc_DES_Encrypt(ke,te, outdata);
 	//strcpy(deshead.DesKey,outdata);
-		char sss[8];
-    sprintf(sss,"encode: %s ",outdata);  
-		CWindow::ShowMessage(sss);
+
 	// 写入信息头
-	_lwrite(fh_out,(char*)&deshead,sizeof(deshead));
+	//_lwrite(fh_out,(char*)&deshead,sizeof(deshead));
     // 显示等待光标
 	wnd.ShowWaitCursor();
 
 	// 读取明文到缓冲区
+////	while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
+	DWORD dwReadSize = 0;
+	BOOL bRet;
+	////while( (bRet=ReadFile(fh_in,databuf,BUFSIZE,&dwReadSize,NULL))  )
 	while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
 	{   // 显示加密进度
         wnd.SetWindowCaption("共计%d块数据，DES正在加密第%d块......",TBlock,++k);
         // 将缓冲区长度变为8的倍数
 		len = ((len+7)>>3)<<3;
 		// 在缓冲区中加密
-		Encrypt(databuf,databuf,len);
+        CWindow::ShowMessage(databuf);
+		//Encrypt(databuf,databuf,len);
+        te=(U08 *)databuf;
+		////U08* tte=(U08*)"显示加密进度";
+     
+        CurCalc_DES_Encrypt(ke,te, outdata);
+		CurCalc_DES_Decrypt(ke,outdata,output);
+	    CWindow::ShowMessage((const char *)output);
 		// 将密文写入输出文件
-		_lwrite(fh_out,databuf,len);
+		////_lwrite(fh_out,databuf,len);
+        _lwrite(fh_out,(char *)outdata,len);
 	}
 
     // 结束等待光标
@@ -231,12 +242,14 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
     // 设置子密钥
     CHECK( SetSubKey(KeyStr) )
 	// 读取信息头并检查长度
-	CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
-	           "错误：该文件不是有效的DES加密文件!" )
+	////CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
+	 ////          "错误：该文件不是有效的DES加密文件!" )
     // 版本控制
 
     //CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
-
+    U08 ke[5]="blue";
+	U08 *te=(U08 *)malloc(2*BUFSIZE);
+	U08 *outdata =(U08 *)malloc(2*BUFSIZE);
 	// 解密密钥串
     Decrypt(deshead.DesKey,deshead.DesKey,16);
 	// 验证密钥的正确性
@@ -244,10 +257,6 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	strcpy(deskey,KeyStr);//密钥串长度一定<=16
 
     ////CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
-
-	CWindow::ShowMessage(deshead.DesKey);
-    CWindow::ShowMessage(deskey);
-    CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
 
 	// 计算总块数
 	TBlock=(deshead.TLen+BUFSIZE-1)/BUFSIZE;
@@ -261,9 +270,15 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 		// 将缓冲区长度变为8的倍数
 		len = ((len+7)>>3)<<3;
 		// 在缓冲区中解密
-		Decrypt(databuf,databuf,len);
+	    ////	Decrypt(databuf,databuf,len);
+        te=(U08 *)databuf;
+  
+        CurCalc_DES_Decrypt(ke,te,outdata);
+
 		// 将明文写入输出文件
-		_lwrite(fh_out,databuf,len);
+		////_lwrite(fh_out,databuf,len);
+
+         ////_lwrite(fh_out,(char *)outdata,len);
 	}
 	// 设置解密文件长度
 	_llseek(fh_out,deshead.TLen,SEEK_SET);
