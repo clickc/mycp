@@ -1,0 +1,52 @@
+8
+
+dir
+12
+http://192.168.110.242/svn/userad/branches/admatch_strategy/include/libevent/lib/pkgconfig
+http://192.168.110.242/svn/userad
+
+
+
+2014-05-14T10:38:09.819246Z
+5
+liqi
+
+
+svn:special svn:externals svn:needs-lock
+
+libevent_pthreads.pc
+file
+
+
+
+
+2014-05-14T02:33:48.000000Z
+cae1938a55789baad3a5096ae23ea5fc
+2014-05-14T10:38:09.819246Z
+5
+liqi
+
+libevent.pc
+file
+
+
+
+
+2014-05-14T02:33:48.000000Z
+d0b74a1f93101c4916551b43fc7d1062
+2014-05-14T10:38:09.819246Z
+5
+liqi
+
+libevent_openssl.pc
+file
+
+
+
+
+2014-05-14T02:33:48.000000Z
+91bab5c7c83fd66d70a83eeccb762426
+2014-05-14T10:38:09.819246Z
+5
+liqi
+

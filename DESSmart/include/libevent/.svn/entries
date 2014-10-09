@@ -1,0 +1,22 @@
+8
+
+dir
+12
+http://192.168.110.242/svn/userad/branches/admatch_strategy/include/libevent
+http://192.168.110.242/svn/userad
+
+
+
+2014-05-14T10:38:09.819246Z
+5
+liqi
+
+
+svn:special svn:externals svn:needs-lock
+
+include
+dir
+
+lib
+dir
+
