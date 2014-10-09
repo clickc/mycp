@@ -7,6 +7,7 @@
 #include "Des.h"
 #include "Window.h"
 #include "GfL.h"
+#include "cc.h"
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -168,30 +169,58 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
     // 设置子密钥
     CHECK( SetSubKey(KeyStr) )
 	// 版本信息
-	deshead.Ver = 1;
+	////deshead.Ver = 1;
     // 文件长度信息
 	deshead.TLen = GetFileSize((HANDLE)fh_in,0);
+	char ss[8];
+    sprintf(ss,"%ld",deshead.TLen);  
+    CWindow::ShowMessage(ss);
 	// 计算总块数
     TBlock=(deshead.TLen+BUFSIZE-1)/BUFSIZE;
+	char s[48];
+    sprintf(s,"%ld",TBlock);  
+    CWindow::ShowMessage(s);
 	// 加密密钥串(用于解密时验证密钥的正确性)
 	memset(deskey,0,16);
 	strcpy(deskey,KeyStr);
-	Encrypt(deshead.DesKey,deskey,16);
+	CWindow::ShowMessage(deskey);
+    sprintf(s,"size deskey is %d",sizeof(deskey));  
+    CWindow::ShowMessage(s);
+    U08 ke[5]="blue";
+	U08 *te=(U08 *)malloc(BUFSIZE);
+	U08 *outdata = (U08 *)malloc(2*BUFSIZE);
+	U08 *output =(U08 *)malloc(2*BUFSIZE);
+	//Encrypt(deshead.DesKey,deskey,16);
+    ////CurCalc_DES_Encrypt(ke,te, outdata);
+	//strcpy(deshead.DesKey,outdata);
+
 	// 写入信息头
-	_lwrite(fh_out,(char*)&deshead,sizeof(deshead));
+	//_lwrite(fh_out,(char*)&deshead,sizeof(deshead));
     // 显示等待光标
 	wnd.ShowWaitCursor();
 
 	// 读取明文到缓冲区
+////	while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
+	DWORD dwReadSize = 0;
+	BOOL bRet;
+	////while( (bRet=ReadFile(fh_in,databuf,BUFSIZE,&dwReadSize,NULL))  )
 	while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
 	{   // 显示加密进度
         wnd.SetWindowCaption("共计%d块数据，DES正在加密第%d块......",TBlock,++k);
         // 将缓冲区长度变为8的倍数
 		len = ((len+7)>>3)<<3;
 		// 在缓冲区中加密
-		Encrypt(databuf,databuf,len);
+        CWindow::ShowMessage(databuf);
+		//Encrypt(databuf,databuf,len);
+        te=(U08 *)databuf;
+		////U08* tte=(U08*)"显示加密进度";
+     
+        CurCalc_DES_Encrypt(ke,te, outdata);
+		CurCalc_DES_Decrypt(ke,outdata,output);
+	    CWindow::ShowMessage((const char *)output);
 		// 将密文写入输出文件
-		_lwrite(fh_out,databuf,len);
+		////_lwrite(fh_out,databuf,len);
+        _lwrite(fh_out,(char *)outdata,len);
 	}
 
     // 结束等待光标
@@ -213,16 +242,22 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
     // 设置子密钥
     CHECK( SetSubKey(KeyStr) )
 	// 读取信息头并检查长度
-	CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
-	           "错误：该文件不是有效的DES加密文件!" )
+	////CHECK_MSG( _lread(fh_in,&deshead,sizeof(deshead)) == sizeof(deshead),
+	 ////          "错误：该文件不是有效的DES加密文件!" )
     // 版本控制
-	CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
+
+    //CHECK_MSG( deshead.Ver ==1,"该版程序无法解密此文件。\n请使用该程序的最新版。")
+    U08 ke[5]="blue";
+	U08 *te=(U08 *)malloc(2*BUFSIZE);
+	U08 *outdata =(U08 *)malloc(2*BUFSIZE);
 	// 解密密钥串
     Decrypt(deshead.DesKey,deshead.DesKey,16);
 	// 验证密钥的正确性
 	memset(deskey,0,16);
 	strcpy(deskey,KeyStr);//密钥串长度一定<=16
-    CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
+
+    ////CHECK_MSG( !memcmp(deshead.DesKey,deskey,16), "错误：DES密钥不正确! ");
+
 	// 计算总块数
 	TBlock=(deshead.TLen+BUFSIZE-1)/BUFSIZE;
 	// 显示等待光标
@@ -235,9 +270,15 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 		// 将缓冲区长度变为8的倍数
 		len = ((len+7)>>3)<<3;
 		// 在缓冲区中解密
-		Decrypt(databuf,databuf,len);
+	    ////	Decrypt(databuf,databuf,len);
+        te=(U08 *)databuf;
+  
+        CurCalc_DES_Decrypt(ke,te,outdata);
+
 		// 将明文写入输出文件
-		_lwrite(fh_out,databuf,len);
+		////_lwrite(fh_out,databuf,len);
+
+         ////_lwrite(fh_out,(char *)outdata,len);
 	}
 	// 设置解密文件长度
 	_llseek(fh_out,deshead.TLen,SEEK_SET);
@@ -259,7 +300,9 @@ bool CDes::Decrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 bool CDes::Encrypt(char *Out,char *In,UINT len,const char *KeyStr)
 {
     CHECK( Out && In && !(len&0x7) )
-
+    char s[48];
+    sprintf(s,"In E is 0x%x \n",In);  
+               CWindow::ShowMessage(s);
 	if( KeyStr )
 		CHECK( SetSubKey(KeyStr) )
 
@@ -267,6 +310,10 @@ bool CDes::Encrypt(char *Out,char *In,UINT len,const char *KeyStr)
 	{   // 1次DES
 		for(int i=0,j=len>>3; i<j; ++i)
 		{
+			
+                sprintf(s,"SubKey[0] is 0x%x \n",&SubKey[0]);  
+               CWindow::ShowMessage(s);
+
 			DES(Out,In,&SubKey[0],ENCRYPT);
 			Out += 8; In += 8;
 		}
@@ -307,6 +354,7 @@ bool CDes::Decrypt(char *Out,char *In,UINT len,const char *KeyStr)
 			Out += 8; In += 8;
 		}
 	}
+		
 	else
 	{   // 3次DES D-E-D
 		for(int i=0,j=len>>3; i<j; ++i)
@@ -317,6 +365,7 @@ bool CDes::Decrypt(char *Out,char *In,UINT len,const char *KeyStr)
 			Out += 8; In += 8;
 		}
 	}
+	
 
 	return true;
 }
@@ -336,6 +385,7 @@ bool CDes::SetSubKey(const char *KeyStr)
 	memset(deskey,0,16);
 	memcpy(deskey,KeyStr,len);
 	// 设置第1密钥
+    /*
 	SetSubKey(&SubKey[0],deskey);
 	Is3DES = false;
 	if( len>8 )
@@ -344,6 +394,7 @@ bool CDes::SetSubKey(const char *KeyStr)
 		// 设置第2密钥
 		SetSubKey(&SubKey[1],&deskey[8]);
 	}
+    */
 	return true;
 }
 /******************************************************************************/
@@ -381,6 +432,13 @@ void CDes::DES(char Out[8],char In[8],const PSubKey pSubKey,bool Type)
 
     // 将输入字节组分解成位组
    	CGfL::ByteToBit(M,In,8);
+   // char ss[8];
+   // sprintf(ss,"M is 0x%x",M);  
+   // CWindow::ShowMessage(ss);
+
+   /// sprintf(ss,"In is 0x%x",In);  
+   /// CWindow::ShowMessage(ss);
+
     // 初始变换
     CGfL::Transform(M,M,IP_Table,64);
 
@@ -413,8 +471,11 @@ void CDes::DES(char Out[8],char In[8],const PSubKey pSubKey,bool Type)
 /******************************************************************************/
 void CDes::SetSubKey(PSubKey pSubKey,const char Key[8])
 {
-    static  bool K[64],*KL=&K[0],*KR=&K[28];
 
+    static  bool K[64],*KL=&K[0],*KR=&K[28];
+	char ss[48];
+    sprintf(ss,"Key is 0x%x",Key);  
+    CWindow::ShowMessage(ss);
     // 将密钥字节组分解成密钥位组
 	CGfL::ByteToBit(K,Key,8);
 	// 密钥变换
@@ -423,8 +484,12 @@ void CDes::SetSubKey(PSubKey pSubKey,const char Key[8])
     {	// 循环左移
         CGfL::RotateL((char*)KL,28,LOOP_Table[i]);
         CGfL::RotateL((char*)KR,28,LOOP_Table[i]);
+	
 		// 压缩变换
         CGfL::Transform((*pSubKey)[i],K,PC2_Table,48);
+	
+        sprintf(ss,"pSubKey [%d] is 0x%x",i,(*pSubKey)[i]);  
+        CWindow::ShowMessage(ss);
     }
 }
 /******************************************************************************/
