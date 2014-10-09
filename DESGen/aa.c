@@ -171,7 +171,7 @@ int substring(unsigned char * s,int start,int len,unsigned char * t)
       return -2;
    else
    {
-     for(i=start-1;i<=start+len-2;i++)
+     for(i=start-1;i<=start+len-1;i++)
      {
        t[j]=s[i];
        printf(" s[%d]=%d ",i,(int)s[i]);
@@ -455,54 +455,37 @@ void CurCalc_DES_Decrypt( U08 *inkey, U08 *indata, U08 *outdata )
 
 
 }
+
+ 
+
 int main(void)
 {
    // FILE *fp = NULL;
-   //char outdata[255] = {0};
-   //char putdata[255]={0};
+   
    U08 outdata[255] = {0};
    U08 putdata[255]={0};
    U08 *ke="12345678";
    U08 *te="this is a test 将一个数进行合并与斥开非常高效的方法";
-   // U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
+   //U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
    printf("str.len:%d \n",strlen(te)); 
    int i=0;
-   // int j = 0;
-   // fp = fopen("./test.txt", "w+");
-   // CurCalc_DES_Encrypt
-   ////CurCalc_DES_Encrypt(ke,te, outdata);
-    //for(i=0;i<20;i++){
-        //ciphertext[i]+=1;
-      //  printf("%02x\n ",outdata[i]);
-        
-    //}
-
-   printf("\n");
-   /*
-   int j;
-   for(j=0;j<strlen(te);j++)
-   {
-     printf("j=%d,c=%u \n",j,(int)te[j]);
-
-   }
-   U08 tc[3];
-   tc[0]=te[16];
-   tc[1]=te[17];
-   tc[2]=0;
-   char tcc[5]="测试";  
-   printf("tcc=%s \n",tcc);
-   */
+  
    U08 *tee=(U08 *)malloc(8);
    
 
    U08 *alldata=(U08 *)malloc(20*strlen(te));
    int k=0;
    int m=0;
-   for(i=0;i<(strlen(te)+10);i+=8)
+   for(i=0;i<(strlen(te)-8);i+=8)
    {
+      
       substring(te,i,8,tee);
+      
+     
       CurCalc_DES_Encrypt(ke,tee, outdata);
       CurCalc_DES_Decrypt("12345678",outdata,putdata);
+      printf("i=%d p=%s \n ",i,putdata);
+
       for(m=0;m<8;m++)
       {
         if((int)putdata[m]>0)
@@ -511,51 +494,32 @@ int main(void)
         }
       }
 
-      printf("i=%d p=%s \n",i,putdata);  
-      printf("\n");
    }
+
+   printf("alldata1: %s \n",alldata);
+   printf("te:%s \n",te);   
+   substring(te,i,(strlen(te)-i),tee);
+   printf("tee:%s \n",tee);
+   CurCalc_DES_Encrypt(ke,tee, outdata);
+   for(m=0;m<8;m++)
+   {
+    putdata[m]=0;
+    tee[m]=0;
+   }
+   
+   CurCalc_DES_Decrypt("12345678",outdata,putdata);
+   for(m=0;m<=(strlen(te)-i+1);m++)
+   {
+        if((int)putdata[m]>0)
+        {
+          alldata[k++]=putdata[m];
+        }
+   }
+
+
 
    printf("alldata: %s \n",alldata);
 
-  //// CurCalc_DES_Decrypt("12345678",outdata,putdata);
-  //// printf("%s\n",putdata);
-
-   /*
-	//-------------------------------------------------------------------------------
-   int ret;
-    char buf[1024];
-    int fd;
-    fd = open("./a.txt",O_RDONLY);//读取密文
-    if(fd<0){
-        printf("open errer\n");
-
-    }
-    while(1){
-        bzero(buf,1024);
-        ret=read(fd,buf,8);
-        if(ret<=0){
-            break;
-        }
-        for(i=0;i<strlen(buf);i++)
-        {
-            printf("%d ",buf[i]);
-			  }
-        printf("\n");
-   CurCalc_DES_Decrypt("chanct-gms",buf,putdata);
-    printf("%s\n",putdata);
-    }
-    printf("\n");
-
-    close(fd);
-   
-
-
-   // CurCalc_DES_Decrypt("chanct-gms",outdata,putdata);
-      
-    //printf("%s\n",putdata);
-    //fwrite(outdata, 10, 1, fp);
-    //fclose(fp);
-    */
     return 0;
 }
 
