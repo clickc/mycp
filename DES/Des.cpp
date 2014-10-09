@@ -138,6 +138,7 @@ bool CDes::Encrypt(const char *OutFile,const char *InFile,const char *KeyStr)
 	CloseFile();
 	return true;
 }
+
 /******************************************************************************/
 //	名称：Decrypt
 //	功能：解密
