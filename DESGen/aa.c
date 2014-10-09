@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include<string.h>
-#include<fcntl.h>
+//#include<string.h>
+//#include<fcntl.h>
 	
 	
 	
@@ -159,6 +159,56 @@ void LShift(unsigned char *buf28, int nShift);
 void fFunction(unsigned char *R, unsigned char*K, unsigned char *result);
 void S_Change(unsigned char *src, unsigned char *result);
 void SelectExchangeFromTable(int nTable, unsigned char *src, unsigned char *dst);
+
+int substring(unsigned char * s,int start,int len,unsigned char * t)
+{
+   int i=0,j=0;
+   while(s[i])
+      i++;
+   if(i<start)
+      return -1;
+   else if(i<start+len)
+      return -2;
+   else
+   {
+     for(i=start-1;i<=start+len-2;i++)
+     {
+       t[j]=s[i];
+       printf(" s[%d]=%d ",i,(int)s[i]);
+       j++;
+     }
+     printf("\n");
+     t[j]='\0';
+     return 1;
+   }
+}
+
+
+int substringencn(unsigned char * s,int start,int len,unsigned char * t)
+{
+
+   int i=0,j=0;
+   while(s[i])
+      i++;
+
+   if(i<start)
+      return -1;
+   else if(i<start+len)
+      return -2;
+   else
+   {
+     for(i=start-1;i<=start+len-2;i++)
+     {
+       t[j]=s[i];
+       printf(" s[%d]=%d ",i,(int)s[i]);
+       j++;
+     }
+     printf("\n");
+     t[j]='\0';
+     return 1;
+   }
+
+}
 
 
 void BitToByte(unsigned char *src, unsigned char *dst, int n)
@@ -391,6 +441,7 @@ void S_Change(unsigned char *src, unsigned char *result)
 */
 void CurCalc_DES_Encrypt( U08 *inkey, U08 *indata, U08 *outdata )
 {
+        
 	DesAlgo( inkey, indata, outdata, 1 );
 }
 
@@ -412,30 +463,92 @@ void CurCalc_DES_Encrypt( U08 *inkey, U08 *indata, U08 *outdata )
 */
 void CurCalc_DES_Decrypt( U08 *inkey, U08 *indata, U08 *outdata )
 {
+        /*
+        U08 *allOutput="test";
+        U08 *tempout="test";
+        U08 *tempin="test";
+        int i=0;
+
+        for(i=0;i<sizeof(indata);i+=4)
+        {
+           tempin=indata+i;
+           DesAlgo( inkey, tempin, tempout, 0 );
+           printf("i=%d out=%s \n",i,tempout);
+        }           
+        */
+
 	DesAlgo( inkey, indata, outdata, 0 );
+
+
 }
 int main(void)
 {
    // FILE *fp = NULL;
-    char outdata[255] = {0};
-    char putdata[255]={0};
-    int i=0;
+    //char outdata[255] = {0};
+    //char putdata[255]={0};
+    U08 outdata[255] = {0};
+    U08 putdata[255]={0};
+    U08 *ke="12345678";
+    U08 *te="this is a test 将一个数进行合并与斥开非常高效的方法";
+   // U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
+   printf("str.len:%d \n",strlen(te)); 
+   int i=0;
    // int j = 0;
    // fp = fopen("./test.txt", "w+");
    // CurCalc_DES_Encrypt
-   CurCalc_DES_Encrypt("12345678", "测试代码", outdata);
-    for(i=0;i<strlen(outdata);i++){
+   ////CurCalc_DES_Encrypt(ke,te, outdata);
+    //for(i=0;i<20;i++){
         //ciphertext[i]+=1;
-        printf("%02x\n ",outdata[i]);
+      //  printf("%02x\n ",outdata[i]);
         
-    }
+    //}
 
    printf("\n");
-   CurCalc_DES_Decrypt("12345678",outdata,putdata);
-    printf("%s\n",putdata);
+   /*
+   int j;
+   for(j=0;j<strlen(te);j++)
+   {
+     printf("j=%d,c=%u \n",j,(int)te[j]);
 
+   }
+   U08 tc[3];
+   tc[0]=te[16];
+   tc[1]=te[17];
+   tc[2]=0;
+   char tcc[5]="测试";  
+   printf("tcc=%s \n",tcc);
+   */
+   U08 *tee=(U08 *)malloc(8);
+   
+
+   U08 *alldata=(U08 *)malloc(10*strlen(te));
+   int k=0;
+   int m=0;
+   for(i=0;i<strlen(te);i+=8)
+   {
+      substring(te,i,8,tee);
+      CurCalc_DES_Encrypt(ke,tee, outdata);
+      CurCalc_DES_Decrypt("12345678",outdata,putdata);
+      for(m=0;m<8;m++)
+      {
+        if((int)putdata[m]>0)
+        {
+          alldata[k++]=putdata[m]; 
+        }
+      }
+
+      printf("i=%d p=%s \n",i,putdata);  
+      printf("\n");
+   }
+
+   printf("alldata is %s \n",alldata);
+
+  //// CurCalc_DES_Decrypt("12345678",outdata,putdata);
+  //// printf("%s\n",putdata);
+
+   /*
 	//-------------------------------------------------------------------------------
-int ret;
+   int ret;
     char buf[1024];
     int fd;
     fd = open("./a.txt",O_RDONLY);//读取密文
@@ -468,6 +581,7 @@ int ret;
     //printf("%s\n",putdata);
     //fwrite(outdata, 10, 1, fp);
     //fclose(fp);
+    */
     return 0;
 }
 
