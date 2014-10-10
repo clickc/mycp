@@ -6,13 +6,13 @@
 --------------------Configuration: Minica - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSP35D5.tmp" with contents
+Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSP9B79.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Minica.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "D:\projects\clickc_win_workplace\mycp\DES\Des.cpp"
 ]
-Creating command line "cl.exe @C:\Users\zkyz\AppData\Local\Temp\RSP35D5.tmp" 
-Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSP35D6.tmp" with contents
+Creating command line "cl.exe @C:\Users\zkyz\AppData\Local\Temp\RSP9B79.tmp" 
+Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSP9B7A.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Minica.pdb" /debug /machine:I386 /out:"Debug/Minica.exe" /pdbtype:sept 
 .\Debug\AboutDlg.obj
@@ -29,18 +29,18 @@ Creating temporary file "C:\Users\zkyz\AppData\Local\Temp\RSP35D6.tmp" with cont
 .\Debug\Window.obj
 .\Debug\Minica.res
 ]
-Creating command line "link.exe @C:\Users\zkyz\AppData\Local\Temp\RSP35D6.tmp"
+Creating command line "link.exe @C:\Users\zkyz\AppData\Local\Temp\RSP9B7A.tmp"
 <h3>Output Window</h3>
 Compiling...
 Des.cpp
-D:\projects\clickc_win_workplace\mycp\DES\Des.cpp(205) : warning C4101: 'bRet' : unreferenced local variable
-d:\projects\clickc_win_workplace\mycp\des\cc.h(233) : warning C4700: local variable 'tempB' used without having been initialized
-Linking...
+D:\projects\clickc_win_workplace\mycp\DES\Des.cpp(225) : error C2664: 'ShowMessage' : cannot convert parameter 1 from 'unsigned char *' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Ö´ÐÐ cl.exe Ê±³ö´í.
 
 
 
 <h3>Results</h3>
-Minica.exe - 0 error(s), 0 warning(s)
+Minica.exe - 1 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
