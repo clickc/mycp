@@ -188,9 +188,9 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
     sprintf(s,"size deskey is %d",sizeof(deskey));  
     CWindow::ShowMessage(s);
     U08 ke[5]="blue";
-	U08 *te=(U08 *)malloc(BUFSIZE);
-	U08 *outdata = (U08 *)malloc(2*BUFSIZE);
-	U08 *output =(U08 *)malloc(2*BUFSIZE);
+	U08 *te=(U08 *)malloc(200);
+	U08 *outdata = (U08 *)malloc(200);
+	U08 *output =(U08 *)malloc(200);
 	//Encrypt(deshead.DesKey,deskey,16);
     ////CurCalc_DES_Encrypt(ke,te, outdata);
 	//strcpy(deshead.DesKey,outdata);
@@ -205,7 +205,9 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	DWORD dwReadSize = 0;
 	BOOL bRet;
 	////while( (bRet=ReadFile(fh_in,databuf,BUFSIZE,&dwReadSize,NULL))  )
-	while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
+	
+	//while( (len=_lread(fh_in,databuf,BUFSIZE)) >0 )
+    while( (len=_lread(fh_in,databuf,200)) >0 )
 	{   // 显示加密进度
         wnd.SetWindowCaption("共计%d块数据，DES正在加密第%d块......",TBlock,++k);
         // 将缓冲区长度变为8的倍数
@@ -215,10 +217,12 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 		//Encrypt(databuf,databuf,len);
         te=(U08 *)databuf;
 		////U08* tte=(U08*)"显示加密进度";
-     
-        CurCalc_DES_Encrypt(ke,te, outdata);
-		CurCalc_DES_Decrypt(ke,outdata,output);
-	    CWindow::ShowMessage((const char *)output);
+
+        EncryptString(te,outdata,ke);
+	    DecryptString(outdata,output,ke);
+        //CurCalc_DES_Encrypt(ke,te, outdata);
+	    //CurCalc_DES_Decrypt(ke,outdata,output);
+	    CWindow::ShowMessage(output);
 		// 将密文写入输出文件
 		////_lwrite(fh_out,databuf,len);
         _lwrite(fh_out,(char *)outdata,len);
@@ -228,6 +232,7 @@ bool CDes::Encrypt(HFILE &fh_out,HFILE &fh_in,const char *KeyStr)
 	wnd.EndWaitCursor();
 	return true;
 }
+
 /******************************************************************************/
 //	名称：Decrypt
 //	功能：解密
