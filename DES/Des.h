@@ -50,7 +50,7 @@ private:
 	bool	SubKey[2][16][48];//16圈子密钥
 	bool    Is3DES;//3次DES标志
 	char    deskey[17];//密钥串缓冲区
-	char    databuf[BUFSIZE];//数据缓冲区
+	char    databuf[200];//数据缓冲区
 	DesHead deshead;//信息头
 
 };
