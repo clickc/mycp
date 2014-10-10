@@ -168,6 +168,66 @@ void EncryptString(unsigned char * src,unsigned char *dest,unsigned char *key);
 
 void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key);
 
+void ltrim ( U08 *s );
+void rtrim ( U08 *s );
+void trim ( U08 *s );
+void strcpyi(U08 *src,U08 *dest);
+
+void strcpyi(U08 *src,U08 *dest)
+{
+   int i=0;
+   dest=(U08 *)malloc(strlen(src));   
+   for(i=0;i<strlen(src);i++)
+   {
+     dest[i]=src[i];
+   }
+
+}
+
+void ltrim ( U08 *s )
+{
+    printf("in ltrim\n");
+    U08 *p;
+    p = s;
+    while ( *p == ' ' || *p == '\t' ) {*p++;}
+    printf("begin copy p 2 s \n");
+    strcpyi( p,s );
+}
+ 
+void rtrim ( U08 *s )
+{
+    printf("in rtrim\n");
+    int i;
+    printf("s.len=%d \n",strlen(s)); 
+    i = strlen(s)-4;
+    printf("ih=%d \n",i);
+ 
+    int j;
+    for(j=0;j<strlen(s);j++)
+    {
+      printf("s[%d]=%d \n",j,(int)s[j]);
+    }
+
+    while ( ( (int)s[i] == 32 ) && i >= 0 ) 
+    {
+       i--;
+       if(i<0)
+       {
+          break;
+       }
+       printf("ci=%d \n",i);
+    };
+    
+    s[i+1] = '\0';
+}
+ 
+void trim ( U08 *s )
+{
+    printf("in trim\n");
+    ltrim ( s );
+    rtrim ( s );
+}
+
 int substring(unsigned char * s,int start,int len,unsigned char * t)
 {
    int i=0,j=0;
@@ -473,14 +533,13 @@ void EncryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
 
    int k=0,i=0,m=0;
 
-   dest=(U08 *)malloc(strlen(src));   
+   ////dest=(U08 *)malloc(strlen(src));   
     
    for(i=0;i<(strlen(src)-8);i+=8)
    {
      substring(src,i,8,batch);
      CurCalc_DES_Encrypt(key,batch, cipher);
-     
-         
+              
      for(m=0;m<8;m++)
      {
        if((int)cipher[m]>0)
@@ -509,17 +568,17 @@ void EncryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
         }
    }
 
-  for(m=0;m<strlen(src);m++)
-  {
-    printf("src[%d]=%d dest[%d]=%d \n",m,src[m],m,dest[m]);
-  }
+   for(m=0;m<strlen(src);m++)
+   {
+        printf("src[%d]=%d dest[%d]=%d \n",m,src[m],m,dest[m]);
+   }
     
-  printf("ii:%d k:%d dest.length:%d \n",i,k,strlen(dest));
+   printf("ii:%d k:%d dest.length:%d \n",i,k,strlen(dest));
 
-  printf("dest:%s \n",dest);
+   //printf("dest:%s \n",dest);
 
-  unsigned char *out="test";
-  DecryptString(dest,out,key);
+   //unsigned char *out="test";
+   //DecryptString(dest,out,key);
   
 
 }
@@ -532,11 +591,12 @@ void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
 
     int k=0,i=0,m=0;
 
-    dest=(U08 *)malloc(strlen(src));
+    ////dest=(U08 *)malloc(strlen(src));
     printf("src.length:%d \n",strlen(src));
 
     for(i=0;i<(strlen(src)-8);i+=8)
     {
+      printf("loop=%d \n",i);
       substring(src,i+1,8,cipher);
       CurCalc_DES_Decrypt(key,cipher, batch);
 
@@ -555,7 +615,7 @@ void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
     cipher[m]=0;
    }
 
-   substring(src,i,(strlen(src)-i),cipher);
+   substring(src,i+1,(strlen(src)-i),cipher);
    CurCalc_DES_Decrypt(key,cipher,batch);
 
    for(m=0;m<=(strlen(src)-i);m++)
@@ -565,7 +625,7 @@ void DecryptString(unsigned char * src,unsigned char *dest,unsigned char *key)
           dest[k++]=batch[m];
         }
    }
-   printf("dest2:%s \n",dest);   
+   //printf("dest2:%s \n",dest);   
 
 }
  
@@ -581,17 +641,47 @@ int main(void)
    //U08 *te="A desk is not just a place people do their work—its a whole other project for creators. Jongmin Kim used his desk to create a project tha";
    printf("str.len:%d \n",strlen(te)); 
 
-       
+   //trim(te);   
+   int i;
+
+   for(i=0;i<strlen(te);i++)
+   {
+     printf("te[%d]=%d ",i,(int)te[i]);
+
+   }
+   printf("\n");
+    
    U08* outdata=(U08 *)malloc(strlen(te));
    U08* putdata=(U08 *)malloc(strlen(te));
 
+   
+   for(i=0;i<strlen(outdata);i++)
+   {
+     putdata[i]=0;
+
+   }
+
+
    EncryptString(te,outdata,ke);
-  
-   printf("outdata:%s \n",outdata);
+   //printf("outdata.length:%d \n",strlen(outdata));
+   //printf("outdata.size:%d \n",sizeof(outdata));  
+   //printf("outdata:%s \n",outdata);
+   for(i=0;i<strlen(outdata);i++)
+   {
+     printf("outdata[%d]=%d ",i,(int)outdata[i]);
+
+   }
+
    DecryptString(outdata,putdata,ke);
- 
+   //rtrim(putdata);
    printf("putdata:%s \n",putdata);
    
+   for(i=0;i<strlen(putdata);i++)
+   {
+     printf("putdata[%d]=%d ",i,(int)putdata[i]);
+
+   }
+   printf("\n");
 
    /*
    int i=0;
