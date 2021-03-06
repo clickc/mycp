@@ -1,7 +1,9 @@
 
+//run confing
+rnn_exmpales/phoneme_transcription/phoneme_transcription_raw.config
+
+
 train speech recognition model with mdrnn
-
-
 org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26509  ------------------------------
 org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  26 layers
 org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  InputLayer input  2D (++) size 1
