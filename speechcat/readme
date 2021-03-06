@@ -1,0 +1,113 @@
+
+train speech recognition model with mdrnn
+
+
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26509  ------------------------------
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  26 layers
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  InputLayer input  2D (++) size 1
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer input_block  2D (++) size 12 source "input"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+//why 10?(4*2+1*2(other dimension)|| (2+3)*2)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_0  2D (--) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_1  2D (-+) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_2  2D (+-) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_3  2D (++) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_0_block  2D (++) size 24 source "hidden_0_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_1_block  2D (++) size 24 source "hidden_0_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_2_block  2D (++) size 24 source "hidden_0_2"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_0_3_block  2D (++) size 24 source "hidden_0_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  NeuronLayer subsample_0  2D (++) size 6 source "hidden_0_0_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+//why 50 (2+3)*10
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_0  2D (--) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_1  2D (-+) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_2  2D (+-) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_3  2D (++) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_0_block  2D (++) size 80 source "hidden_1_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_1_block  2D (++) size 80 source "hidden_1_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_2_block  2D (++) size 80 source "hidden_1_2"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_3_block  2D (++) size 80 source "hidden_1_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  NeuronLayer subsample_1  2D (++) size 20 source "hidden_1_0_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_2_0  2D (--) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_2_1  2D (-+) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  LstmLayer hidden_2_2  2D (+-) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  LstmLayer hidden_2_3  2D (++) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  CollapseLayer output_collapse  1D (+) size 11 source "hidden_2_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  TranscriptionLayer output  1D (+) size 11 source "output_collapse"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  ------------------------------
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  16 connections:
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_2_3 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_3_to_hidden_2_3_delay_-1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_3_to_hidden_2_3_delay_0_-1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_1_to_hidden_2_3 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_1_3 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_1_3_to_hidden_1_3_delay_-1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_1_3_to_hidden_1_3_delay_0_-1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_0_to_hidden_1_3 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_2_2 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_2_to_hidden_2_2_delay_-1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_2_to_hidden_2_2_delay_0_1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_1_to_hidden_2_2 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_0_3 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_0_3_to_hidden_0_3_delay_-1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_0_3_to_hidden_0_3_delay_0_-1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  input_block_to_hidden_0_3 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_1_2 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_1_2_to_hidden_1_2_delay_-1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_1_2_to_hidden_1_2_delay_0_1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  subsample_0_to_hidden_1_2 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_2_1 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_2_1_to_hidden_2_1_delay_1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_2_1_to_hidden_2_1_delay_0_-1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  subsample_1_to_hidden_2_1 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_output (11 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  output_collapse_to_output (copy)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_hidden_0_2 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_0_2_to_hidden_0_2_delay_-1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_0_2_to_hidden_0_2_delay_0_1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  input_block_to_hidden_0_2 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_hidden_1_1 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_1_1_to_hidden_1_1_delay_1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_1_1_to_hidden_1_1_delay_0_-1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  subsample_0_to_hidden_1_1 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_2_0 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_2_0_to_hidden_2_0_delay_1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_2_0_to_hidden_2_0_delay_0_1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  subsample_1_to_hidden_2_0 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_0_1 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_0_1_to_hidden_0_1_delay_1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_0_1_to_hidden_0_1_delay_0_-1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  input_block_to_hidden_0_1 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_1_0 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_1_0_to_hidden_1_0_delay_1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_1_0_to_hidden_1_0_delay_0_1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  subsample_0_to_hidden_1_0 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  bias_to_hidden_0_0 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_to_hidden_0_0_delay_1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_to_hidden_0_0_delay_0_1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  input_block_to_hidden_0_0 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_0_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_1_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_2_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_3_to_output_collapse (550 wts)
+//why 144 (subsample3*4window 2 cell FeedFowrd 6*tan)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_1_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_2_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_3_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_0_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_1_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_2_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26517  hidden_1_3_block_to_subsample_1 (1600 wts)
+
+

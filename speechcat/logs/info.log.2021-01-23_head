@@ -1,0 +1,1000 @@
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26346  =======datafile header info:rnn_exmpales/digits/digit_offline.nc==============
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26348  numDims:2
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26348  inputSize:1
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26348  maxSeqs:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26353  numSequences:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26376  seq[0]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26378  seq[1]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26378  seq[2]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26378  seq[3]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26378  seq[4]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26378  seq[5]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[6]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[7]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[8]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[9]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[10]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[11]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[12]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26379  seq[13]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[14]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[15]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[16]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[17]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[18]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[19]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[20]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[21]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26380  seq[22]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[23]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[24]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[25]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[26]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[27]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[28]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[29]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[30]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[31]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26381  seq[32]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[33]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[34]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[35]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[36]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[37]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[38]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[39]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[40]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26382  seq[41]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[42]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[43]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[44]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[45]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[46]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[47]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[48]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26383  seq[49]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[50]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[51]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[52]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[53]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[54]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[55]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[56]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[57]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[58]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26384  seq[59]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[60]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[61]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[62]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[63]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[64]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[65]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[66]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[67]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[68]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[69]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[70]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[71]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[72]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26385  seq[73]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[74]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[75]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[76]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[77]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[78]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[79]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[80]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[81]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[82]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[83]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[84]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[85]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[86]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[87]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26386  seq[88]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[89]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[90]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[91]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[92]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[93]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[94]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[95]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[96]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[97]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[98]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[99]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[100]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26387  seq[101]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[102]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[103]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[104]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[105]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[106]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[107]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[108]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[109]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[110]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[111]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[112]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[113]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[114]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26388  seq[115]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[116]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[117]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[118]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[119]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[120]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[121]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[122]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[123]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[124]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[125]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[126]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26389  seq[127]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[128]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[129]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[130]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[131]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[132]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[133]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[134]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[135]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[136]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[137]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26390  seq[138]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[139]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[140]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[141]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[142]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[143]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[144]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[145]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[146]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[147]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[148]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[149]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[150]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[151]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26391  seq[152]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[153]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[154]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[155]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[156]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[157]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[158]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[159]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[160]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[161]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[162]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[163]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[164]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26392  seq[165]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[166]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[167]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[168]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[169]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[170]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[171]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[172]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[173]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[174]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[175]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[176]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[177]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[178]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26393  seq[179]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[180]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[181]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[182]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[183]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[184]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[185]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[186]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[187]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[188]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[189]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[190]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[191]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[192]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26394  seq[193]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[194]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[195]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[196]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[197]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[198]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  seq[199]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  numTimesteps:6553600
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26395  outputSize:10
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26398  targetLabels:0 1 2 3 4 5 6 7 8 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26400  target[0]=6 6 2 9 2 3 4 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26400  target[1]=5 9 7 9 5 5 6 1 0 7 3 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26400  target[2]=1 9 7 2 7 1 5 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[3]=8 9 6 3 5 2 2 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[4]=9 4 3 0 1 4 5 4 8 7 7 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[5]=3 0 1 6 9 6 9 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[6]=6 5 7 5 8 4 0 6 1 7 8 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[7]=5 8 9 9 7 2 8 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26401  target[8]=7 4 5 4 6 2 1 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[9]=1 2 6 1 1 7 1 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[10]=0 7 3 0 7 7 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[11]=1 4 9 9 8 2 4 2 1 9 0 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[12]=2 4 7 2 6 4 0 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[13]=1 5 5 1 7 9 4 5 4 3 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26402  target[14]=9 7 0 6 2 6 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[15]=6 4 2 2 0 0 3 3 7 8 5 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[16]=2 9 2 6 7 9 3 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[17]=1 9 4 5 1 1 4 5 6 5 1 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[18]=5 8 4 3 3 0 1 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[19]=1 2 0 5 3 9 2 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[20]=8 0 5 3 0 4 2 4 3 9 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26403  target[21]=9 6 5 2 4 6 5 3 6 7 7 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[22]=2 3 3 4 2 4 9 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[23]=0 5 3 9 1 5 1 1 5 8 8 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[24]=9 2 8 4 0 0 4 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[25]=5 7 3 1 4 9 8 7 4 0 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[26]=4 7 5 1 6 1 8 2 5 3 7 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[27]=5 4 0 3 7 3 7 8 7 1 3 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26404  target[28]=5 6 4 6 0 5 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[29]=9 4 0 1 2 0 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[30]=4 6 2 1 9 1 1 2 2 3 6 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[31]=6 8 8 5 9 7 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[32]=4 5 4 3 6 9 0 4 0 8 4 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[33]=9 3 8 2 0 7 6 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[34]=4 6 4 0 4 5 4 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[35]=2 4 7 3 4 0 9 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26405  target[36]=6 4 2 7 0 3 7 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[37]=8 2 2 6 8 8 7 9 6 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[38]=5 0 8 7 9 2 3 7 0 3 9 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[39]=2 7 4 8 6 3 4 4 5 9 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[40]=0 5 3 0 5 8 3 4 8 9 3 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[41]=9 9 4 6 8 8 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[42]=1 9 8 5 1 0 3 3 3 0 0 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[43]=4 3 3 5 9 2 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26406  target[44]=9 2 1 8 8 9 1 2 6 4 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[45]=9 4 2 3 2 8 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[46]=7 9 3 8 4 0 1 4 1 3 6 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[47]=8 0 4 4 3 9 5 6 0 1 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[48]=6 0 4 0 0 2 3 1 0 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[49]=9 5 7 3 3 8 7 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[50]=0 4 6 8 3 2 1 1 8 7 1 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26407  target[51]=1 8 4 8 1 7 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[52]=7 7 0 0 4 4 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[53]=8 8 1 8 4 9 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[54]=4 0 5 8 0 3 9 9 9 0 4 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[55]=1 5 3 3 6 8 0 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[56]=1 7 0 2 8 9 6 1 7 0 0 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[57]=6 4 7 9 1 8 7 0 7 4 2 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[58]=3 1 9 0 2 3 8 6 9 5 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[59]=0 2 1 5 8 5 8 4 1 2 3 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26408  target[60]=1 2 2 4 0 2 2 6 7 3 5 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26409  target[61]=7 9 5 0 9 9 0 0 0 0 2 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26409  target[62]=3 0 6 1 8 9 0 1 0 1 6 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26411  target[63]=2 6 5 0 2 8 3 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[64]=6 2 3 9 2 6 8 8 1 6 6 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[65]=5 7 7 2 0 9 7 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[66]=9 4 6 3 9 5 4 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[67]=1 3 1 5 7 7 6 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[68]=6 0 2 3 8 8 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[69]=4 5 1 4 2 9 7 4 4 0 2 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[70]=3 7 0 4 5 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26412  target[71]=3 1 2 3 1 1 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[72]=3 5 2 2 2 7 3 5 9 3 8 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[73]=2 0 6 1 3 1 4 9 9 1 7 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[74]=7 2 9 7 7 2 1 8 5 6 7 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[75]=6 5 8 2 8 0 3 8 4 4 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[76]=8 0 2 7 0 3 0 2 7 5 7 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[77]=1 7 4 2 5 8 1 9 3 7 8 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[78]=0 0 2 1 1 3 1 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[79]=0 8 1 5 1 0 9 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[80]=9 9 7 4 5 6 9 5 7 7 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26413  target[81]=5 1 1 4 9 6 8 0 6 3 0 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[82]=4 6 3 7 6 2 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[83]=1 3 0 1 6 1 2 0 8 3 7 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[84]=7 2 8 9 6 6 3 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[85]=1 8 2 1 0 8 2 4 7 8 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[86]=4 2 4 5 1 4 8 2 1 2 4 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[87]=0 3 9 0 9 2 7 2 6 4 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26414  target[88]=5 2 2 4 3 0 3 6 4 4 4 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[89]=2 8 8 2 2 8 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[90]=7 1 4 4 0 6 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[91]=5 3 8 8 7 4 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[92]=0 5 1 5 1 0 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[93]=5 9 3 8 2 1 1 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[94]=3 9 0 2 2 1 0 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[95]=9 1 9 5 1 0 4 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[96]=0 8 0 9 8 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[97]=0 0 3 6 2 5 4 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26415  target[98]=6 9 5 8 2 2 4 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[99]=7 8 7 2 3 5 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[100]=8 4 1 0 1 6 4 8 9 9 7 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[101]=9 4 4 6 8 1 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[102]=5 5 0 9 0 1 7 9 2 0 4 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[103]=1 3 5 5 2 8 5 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[104]=2 8 5 0 5 0 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[105]=4 7 0 2 5 8 0 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[106]=7 8 0 6 3 3 9 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[107]=5 9 3 1 0 9 9 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26416  target[108]=9 0 0 1 7 5 7 0 7 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[109]=9 6 5 8 4 8 8 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[110]=0 4 2 1 4 4 2 3 0 2 6 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[111]=1 7 8 9 8 0 6 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[112]=4 2 2 7 6 1 5 2 5 2 9 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[113]=6 2 5 6 4 8 4 7 0 1 0 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[114]=8 7 4 4 4 5 2 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[115]=9 3 1 9 6 8 9 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[116]=2 1 9 5 6 6 0 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[117]=0 5 5 9 1 7 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[118]=5 0 5 1 9 5 7 6 2 1 4 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26417  target[119]=1 9 9 6 1 6 8 1 4 1 9 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[120]=7 0 1 6 7 7 7 4 5 6 2 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[121]=0 7 4 9 3 4 0 1 6 0 1 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[122]=0 6 5 2 0 4 7 8 8 6 1 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[123]=9 4 0 0 5 9 8 0 8 0 4 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[124]=4 6 2 1 6 6 0 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[125]=7 7 7 1 8 6 3 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[126]=1 7 1 9 2 6 7 9 5 3 7 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[127]=5 7 3 3 7 1 3 7 1 3 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26418  target[128]=8 7 8 8 1 5 0 0 9 7 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[129]=1 1 9 8 2 6 3 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[130]=3 2 2 8 1 4 6 2 3 6 1 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[131]=7 9 4 7 8 3 2 8 9 0 5 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[132]=2 1 0 2 5 2 4 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[133]=0 3 3 7 4 8 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[134]=0 0 9 0 8 8 8 9 2 1 9 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26419  target[135]=7 7 3 9 1 7 7 8 5 6 5 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[136]=6 5 7 2 8 7 5 5 9 1 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[137]=1 5 8 3 2 4 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[138]=2 9 2 2 3 2 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[139]=9 8 9 3 4 2 6 0 0 1 7 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[140]=6 9 5 5 1 8 0 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[141]=0 6 8 9 5 6 0 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26420  target[142]=2 2 2 8 3 1 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[143]=0 0 9 3 7 3 8 6 6 2 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[144]=0 5 9 9 4 7 1 0 2 8 2 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[145]=1 4 1 6 9 0 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[146]=7 7 5 5 9 3 6 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[147]=7 7 0 9 0 1 2 9 5 9 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26421  target[148]=9 2 1 4 2 9 6 5 4 0 1 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[149]=2 7 4 5 4 9 3 1 5 9 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[150]=3 1 4 6 7 6 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[151]=5 1 1 9 7 4 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[152]=7 9 4 2 7 0 3 3 0 5 9 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[153]=8 3 4 1 1 4 5 4 8 7 6 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26422  target[154]=4 4 6 8 9 1 5 3 4 8 1 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[155]=8 9 4 4 2 4 3 8 0 5 1 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[156]=5 8 1 1 2 1 1 9 5 0 4 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[157]=5 6 6 3 9 2 0 1 2 3 6 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[158]=9 5 5 3 3 2 8 3 5 9 5 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[159]=1 8 4 4 5 7 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[160]=1 1 6 1 3 2 4 4 9 2 4 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[161]=5 6 9 9 8 0 0 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[162]=0 4 1 7 5 5 7 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26423  target[163]=5 9 6 7 6 9 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[164]=2 3 7 7 1 5 4 4 7 9 3 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[165]=3 6 3 4 9 2 1 0 2 1 9 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[166]=7 4 8 6 3 3 9 0 9 7 3 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[167]=9 8 1 5 6 4 2 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[168]=2 0 0 2 4 1 4 4 2 9 7 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[169]=6 5 8 0 9 1 4 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[170]=3 5 6 5 3 5 0 9 1 4 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[171]=4 2 7 1 6 0 7 4 3 3 9 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[172]=4 4 4 5 2 8 8 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26424  target[173]=7 7 0 2 4 8 0 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[174]=3 2 9 2 7 7 9 1 3 3 6 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[175]=2 7 4 8 2 4 6 0 3 9 2 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[176]=2 3 2 3 7 5 9 7 7 8 5 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[177]=3 2 8 0 3 1 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[178]=1 1 1 8 9 7 8 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[179]=5 4 4 1 5 0 6 9 7 0 0 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[180]=2 8 9 0 0 8 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26425  target[181]=3 4 4 8 8 3 4 3 2 4 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[182]=2 6 3 8 7 7 8 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[183]=8 4 8 7 8 6 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[184]=9 5 5 3 3 1 6 0 1 3 5 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[185]=6 9 4 3 1 8 3 1 6 3 8 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[186]=0 6 1 7 0 0 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26426  target[187]=4 1 1 4 1 3 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[188]=4 3 4 1 1 6 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[189]=3 2 2 3 2 8 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[190]=1 6 5 3 6 2 7 6 7 6 2 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[191]=8 0 0 4 0 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[192]=4 9 5 9 3 7 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26427  target[193]=5 5 3 4 4 9 8 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[194]=2 3 5 8 9 8 0 8 9 5 1 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[195]=1 6 8 4 8 0 9 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[196]=3 6 9 9 7 3 3 2 4 1 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[197]=2 5 0 9 4 8 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[198]=4 4 6 6 9 4 4 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26428  target[199]=5 4 3 7 0 1 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26429  ===============================================
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26509  ------------------------------
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  26 layers
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  InputLayer input  2D (++) size 1
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer input_block  2D (++) size 12 source "input"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_0  2D (--) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_1  2D (-+) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_2  2D (+-) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  LstmLayer hidden_0_3  2D (++) inputSize 10 outputSize 2 source "input_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_0_block  2D (++) size 24 source "hidden_0_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_1_block  2D (++) size 24 source "hidden_0_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26510  BlockLayer hidden_0_2_block  2D (++) size 24 source "hidden_0_2"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_0_3_block  2D (++) size 24 source "hidden_0_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  NeuronLayer subsample_0  2D (++) size 6 source "hidden_0_0_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_0  2D (--) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_1  2D (-+) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_2  2D (+-) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_1_3  2D (++) inputSize 50 outputSize 10 source "subsample_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_0_block  2D (++) size 80 source "hidden_1_0"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_1_block  2D (++) size 80 source "hidden_1_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_2_block  2D (++) size 80 source "hidden_1_2"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  BlockLayer hidden_1_3_block  2D (++) size 80 source "hidden_1_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  NeuronLayer subsample_1  2D (++) size 20 source "hidden_1_0_block"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_2_0  2D (--) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  LstmLayer hidden_2_1  2D (-+) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26511  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  LstmLayer hidden_2_2  2D (+-) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  (R) 
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  LstmLayer hidden_2_3  2D (++) inputSize 250 outputSize 50 source "subsample_1"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  CollapseLayer output_collapse  1D (+) size 11 source "hidden_2_3"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  TranscriptionLayer output  1D (+) size 11 source "output_collapse"
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  ------------------------------
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  16 connections:
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_2_3 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_3_to_hidden_2_3_delay_-1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_3_to_hidden_2_3_delay_0_-1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_1_to_hidden_2_3 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_1_3 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_1_3_to_hidden_1_3_delay_-1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_1_3_to_hidden_1_3_delay_0_-1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_0_to_hidden_1_3 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  bias_to_hidden_2_2 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_2_to_hidden_2_2_delay_-1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  hidden_2_2_to_hidden_2_2_delay_0_1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26512  subsample_1_to_hidden_2_2 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_0_3 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_0_3_to_hidden_0_3_delay_-1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_0_3_to_hidden_0_3_delay_0_-1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  input_block_to_hidden_0_3 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_1_2 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_1_2_to_hidden_1_2_delay_-1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_1_2_to_hidden_1_2_delay_0_1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  subsample_0_to_hidden_1_2 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  bias_to_hidden_2_1 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26513  hidden_2_1_to_hidden_2_1_delay_1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_2_1_to_hidden_2_1_delay_0_-1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  subsample_1_to_hidden_2_1 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_output (11 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  output_collapse_to_output (copy)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_hidden_0_2 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_0_2_to_hidden_0_2_delay_-1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_0_2_to_hidden_0_2_delay_0_1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  input_block_to_hidden_0_2 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  bias_to_hidden_1_1 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_1_1_to_hidden_1_1_delay_1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  hidden_1_1_to_hidden_1_1_delay_0_-1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26514  subsample_0_to_hidden_1_1 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_2_0 (250 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_2_0_to_hidden_2_0_delay_1_0 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_2_0_to_hidden_2_0_delay_0_1 (12500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  subsample_1_to_hidden_2_0 (5000 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_0_1 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_0_1_to_hidden_0_1_delay_1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_0_1_to_hidden_0_1_delay_0_-1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  input_block_to_hidden_0_1 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  bias_to_hidden_1_0 (50 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_1_0_to_hidden_1_0_delay_1_0 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  hidden_1_0_to_hidden_1_0_delay_0_1 (500 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26515  subsample_0_to_hidden_1_0 (300 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  bias_to_hidden_0_0 (10 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_to_hidden_0_0_delay_1_0 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_to_hidden_0_0_delay_0_1 (20 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  input_block_to_hidden_0_0 (120 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_0_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_1_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_2_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_2_3_to_output_collapse (550 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_0_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_1_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_2_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_0_3_block_to_subsample_0 (144 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_0_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_1_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26516  hidden_1_2_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Mdrnn INFO  2021-01-23 16:12:26517  hidden_1_3_block_to_subsample_1 (1600 wts)
+org.click.media.rnn.Main INFO  2021-01-23 16:12:26517  137259 weights
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26536  =======datafile header info:rnn_exmpales/digits/digit_offline.nc==============
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26536  numDims:2
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26536  inputSize:1
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26536  maxSeqs:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26536  numSequences:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[0]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[1]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[2]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[3]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[4]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[5]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[6]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[7]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26537  seq[8]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[9]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[10]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[11]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[12]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[13]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[14]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[15]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[16]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[17]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[18]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[19]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[20]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[21]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[22]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[23]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26538  seq[24]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[25]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[26]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[27]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[28]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[29]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[30]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[31]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[32]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[33]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[34]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[35]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[36]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[37]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[38]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[39]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[40]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[41]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[42]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[43]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[44]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26539  seq[45]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[46]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[47]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[48]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[49]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[50]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[51]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[52]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[53]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[54]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[55]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[56]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[57]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[58]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[59]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[60]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[61]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[62]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[63]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[64]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[65]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[66]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[67]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[68]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[69]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[70]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26540  seq[71]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[72]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[73]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[74]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[75]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[76]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[77]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[78]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[79]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[80]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[81]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[82]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[83]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[84]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[85]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[86]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[87]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[88]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[89]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[90]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26541  seq[91]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[92]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[93]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[94]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[95]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[96]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[97]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[98]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[99]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[100]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[101]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[102]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[103]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[104]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[105]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[106]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26542  seq[107]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[108]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[109]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[110]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[111]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[112]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[113]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[114]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[115]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[116]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[117]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[118]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[119]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[120]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[121]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[122]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[123]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26543  seq[124]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26545  seq[125]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26546  seq[126]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26546  seq[127]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26546  seq[128]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[129]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[130]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[131]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[132]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[133]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[134]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[135]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[136]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[137]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[138]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[139]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[140]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[141]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[142]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26547  seq[143]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[144]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[145]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[146]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[147]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[148]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[149]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[150]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[151]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[152]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[153]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[154]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[155]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[156]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[157]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[158]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[159]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[160]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26548  seq[161]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[162]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[163]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[164]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[165]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[166]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[167]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[168]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[169]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[170]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[171]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[172]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[173]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[174]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[175]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[176]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[177]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[178]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[179]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[180]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[181]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[182]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[183]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[184]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26549  seq[185]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[186]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[187]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[188]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[189]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[190]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[191]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[192]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[193]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[194]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[195]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[196]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[197]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[198]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  seq[199]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  numTimesteps:6553600
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  outputSize:10
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26550  targetLabels:0 1 2 3 4 5 6 7 8 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26551  target[0]=6 6 2 9 2 3 4 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26551  target[1]=5 9 7 9 5 5 6 1 0 7 3 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26551  target[2]=1 9 7 2 7 1 5 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26551  target[3]=8 9 6 3 5 2 2 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26551  target[4]=9 4 3 0 1 4 5 4 8 7 7 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[5]=3 0 1 6 9 6 9 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[6]=6 5 7 5 8 4 0 6 1 7 8 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[7]=5 8 9 9 7 2 8 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[8]=7 4 5 4 6 2 1 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[9]=1 2 6 1 1 7 1 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[10]=0 7 3 0 7 7 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[11]=1 4 9 9 8 2 4 2 1 9 0 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[12]=2 4 7 2 6 4 0 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[13]=1 5 5 1 7 9 4 5 4 3 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[14]=9 7 0 6 2 6 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[15]=6 4 2 2 0 0 3 3 7 8 5 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[16]=2 9 2 6 7 9 3 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26552  target[17]=1 9 4 5 1 1 4 5 6 5 1 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[18]=5 8 4 3 3 0 1 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[19]=1 2 0 5 3 9 2 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[20]=8 0 5 3 0 4 2 4 3 9 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[21]=9 6 5 2 4 6 5 3 6 7 7 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[22]=2 3 3 4 2 4 9 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[23]=0 5 3 9 1 5 1 1 5 8 8 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26553  target[24]=9 2 8 4 0 0 4 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[25]=5 7 3 1 4 9 8 7 4 0 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[26]=4 7 5 1 6 1 8 2 5 3 7 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[27]=5 4 0 3 7 3 7 8 7 1 3 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[28]=5 6 4 6 0 5 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[29]=9 4 0 1 2 0 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[30]=4 6 2 1 9 1 1 2 2 3 6 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[31]=6 8 8 5 9 7 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26554  target[32]=4 5 4 3 6 9 0 4 0 8 4 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[33]=9 3 8 2 0 7 6 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[34]=4 6 4 0 4 5 4 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[35]=2 4 7 3 4 0 9 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[36]=6 4 2 7 0 3 7 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[37]=8 2 2 6 8 8 7 9 6 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[38]=5 0 8 7 9 2 3 7 0 3 9 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[39]=2 7 4 8 6 3 4 4 5 9 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26555  target[40]=0 5 3 0 5 8 3 4 8 9 3 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[41]=9 9 4 6 8 8 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[42]=1 9 8 5 1 0 3 3 3 0 0 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[43]=4 3 3 5 9 2 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[44]=9 2 1 8 8 9 1 2 6 4 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[45]=9 4 2 3 2 8 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[46]=7 9 3 8 4 0 1 4 1 3 6 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[47]=8 0 4 4 3 9 5 6 0 1 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26556  target[48]=6 0 4 0 0 2 3 1 0 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[49]=9 5 7 3 3 8 7 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[50]=0 4 6 8 3 2 1 1 8 7 1 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[51]=1 8 4 8 1 7 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[52]=7 7 0 0 4 4 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[53]=8 8 1 8 4 9 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[54]=4 0 5 8 0 3 9 9 9 0 4 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26557  target[55]=1 5 3 3 6 8 0 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[56]=1 7 0 2 8 9 6 1 7 0 0 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[57]=6 4 7 9 1 8 7 0 7 4 2 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[58]=3 1 9 0 2 3 8 6 9 5 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[59]=0 2 1 5 8 5 8 4 1 2 3 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[60]=1 2 2 4 0 2 2 6 7 3 5 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[61]=7 9 5 0 9 9 0 0 0 0 2 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[62]=3 0 6 1 8 9 0 1 0 1 6 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[63]=2 6 5 0 2 8 3 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[64]=6 2 3 9 2 6 8 8 1 6 6 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26558  target[65]=5 7 7 2 0 9 7 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[66]=9 4 6 3 9 5 4 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[67]=1 3 1 5 7 7 6 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[68]=6 0 2 3 8 8 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[69]=4 5 1 4 2 9 7 4 4 0 2 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[70]=3 7 0 4 5 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26559  target[71]=3 1 2 3 1 1 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26560  target[72]=3 5 2 2 2 7 3 5 9 3 8 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26560  target[73]=2 0 6 1 3 1 4 9 9 1 7 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26562  target[74]=7 2 9 7 7 2 1 8 5 6 7 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26562  target[75]=6 5 8 2 8 0 3 8 4 4 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26562  target[76]=8 0 2 7 0 3 0 2 7 5 7 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[77]=1 7 4 2 5 8 1 9 3 7 8 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[78]=0 0 2 1 1 3 1 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[79]=0 8 1 5 1 0 9 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[80]=9 9 7 4 5 6 9 5 7 7 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[81]=5 1 1 4 9 6 8 0 6 3 0 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[82]=4 6 3 7 6 2 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[83]=1 3 0 1 6 1 2 0 8 3 7 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26563  target[84]=7 2 8 9 6 6 3 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26564  target[85]=1 8 2 1 0 8 2 4 7 8 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26564  target[86]=4 2 4 5 1 4 8 2 1 2 4 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26564  target[87]=0 3 9 0 9 2 7 2 6 4 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26564  target[88]=5 2 2 4 3 0 3 6 4 4 4 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26564  target[89]=2 8 8 2 2 8 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26565  target[90]=7 1 4 4 0 6 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[91]=5 3 8 8 7 4 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[92]=0 5 1 5 1 0 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[93]=5 9 3 8 2 1 1 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[94]=3 9 0 2 2 1 0 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[95]=9 1 9 5 1 0 4 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26566  target[96]=0 8 0 9 8 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[97]=0 0 3 6 2 5 4 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[98]=6 9 5 8 2 2 4 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[99]=7 8 7 2 3 5 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[100]=8 4 1 0 1 6 4 8 9 9 7 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[101]=9 4 4 6 8 1 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[102]=5 5 0 9 0 1 7 9 2 0 4 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[103]=1 3 5 5 2 8 5 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[104]=2 8 5 0 5 0 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[105]=4 7 0 2 5 8 0 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[106]=7 8 0 6 3 3 9 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[107]=5 9 3 1 0 9 9 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[108]=9 0 0 1 7 5 7 0 7 3 0 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26567  target[109]=9 6 5 8 4 8 8 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[110]=0 4 2 1 4 4 2 3 0 2 6 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[111]=1 7 8 9 8 0 6 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[112]=4 2 2 7 6 1 5 2 5 2 9 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[113]=6 2 5 6 4 8 4 7 0 1 0 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[114]=8 7 4 4 4 5 2 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[115]=9 3 1 9 6 8 9 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[116]=2 1 9 5 6 6 0 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[117]=0 5 5 9 1 7 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[118]=5 0 5 1 9 5 7 6 2 1 4 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[119]=1 9 9 6 1 6 8 1 4 1 9 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26568  target[120]=7 0 1 6 7 7 7 4 5 6 2 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[121]=0 7 4 9 3 4 0 1 6 0 1 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[122]=0 6 5 2 0 4 7 8 8 6 1 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[123]=9 4 0 0 5 9 8 0 8 0 4 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[124]=4 6 2 1 6 6 0 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[125]=7 7 7 1 8 6 3 0         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[126]=1 7 1 9 2 6 7 9 5 3 7 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[127]=5 7 3 3 7 1 3 7 1 3 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[128]=8 7 8 8 1 5 0 0 9 7 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[129]=1 1 9 8 2 6 3 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26569  target[130]=3 2 2 8 1 4 6 2 3 6 1 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[131]=7 9 4 7 8 3 2 8 9 0 5 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[132]=2 1 0 2 5 2 4 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[133]=0 3 3 7 4 8 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[134]=0 0 9 0 8 8 8 9 2 1 9 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[135]=7 7 3 9 1 7 7 8 5 6 5 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[136]=6 5 7 2 8 7 5 5 9 1 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[137]=1 5 8 3 2 4 8 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[138]=2 9 2 2 3 2 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26570  target[139]=9 8 9 3 4 2 6 0 0 1 7 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[140]=6 9 5 5 1 8 0 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[141]=0 6 8 9 5 6 0 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[142]=2 2 2 8 3 1 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[143]=0 0 9 3 7 3 8 6 6 2 8 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[144]=0 5 9 9 4 7 1 0 2 8 2 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[145]=1 4 1 6 9 0 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[146]=7 7 5 5 9 3 6 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26571  target[147]=7 7 0 9 0 1 2 9 5 9 4 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[148]=9 2 1 4 2 9 6 5 4 0 1 0 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[149]=2 7 4 5 4 9 3 1 5 9 6 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[150]=3 1 4 6 7 6 7 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[151]=5 1 1 9 7 4 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[152]=7 9 4 2 7 0 3 3 0 5 9 9 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26572  target[153]=8 3 4 1 1 4 5 4 8 7 6 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26581  target[154]=4 4 6 8 9 1 5 3 4 8 1 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[155]=8 9 4 4 2 4 3 8 0 5 1 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[156]=5 8 1 1 2 1 1 9 5 0 4 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[157]=5 6 6 3 9 2 0 1 2 3 6 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[158]=9 5 5 3 3 2 8 3 5 9 5 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[159]=1 8 4 4 5 7 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[160]=1 1 6 1 3 2 4 4 9 2 4 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[161]=5 6 9 9 8 0 0 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26582  target[162]=0 4 1 7 5 5 7 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[163]=5 9 6 7 6 9 6 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[164]=2 3 7 7 1 5 4 4 7 9 3 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[165]=3 6 3 4 9 2 1 0 2 1 9 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[166]=7 4 8 6 3 3 9 0 9 7 3 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[167]=9 8 1 5 6 4 2 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[168]=2 0 0 2 4 1 4 4 2 9 7 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[169]=6 5 8 0 9 1 4 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[170]=3 5 6 5 3 5 0 9 1 4 7 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26583  target[171]=4 2 7 1 6 0 7 4 3 3 9 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[172]=4 4 4 5 2 8 8 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[173]=7 7 0 2 4 8 0 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[174]=3 2 9 2 7 7 9 1 3 3 6 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[175]=2 7 4 8 2 4 6 0 3 9 2 5 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[176]=2 3 2 3 7 5 9 7 7 8 5 7 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[177]=3 2 8 0 3 1 2 8         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[178]=1 1 1 8 9 7 8 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[179]=5 4 4 1 5 0 6 9 7 0 0 8 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26584  target[180]=2 8 9 0 0 8 8 3         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[181]=3 4 4 8 8 3 4 3 2 4 9 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[182]=2 6 3 8 7 7 8 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[183]=8 4 8 7 8 6 3 9         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[184]=9 5 5 3 3 1 6 0 1 3 5 2 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[185]=6 9 4 3 1 8 3 1 6 3 8 6 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[186]=0 6 1 7 0 0 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[187]=4 1 1 4 1 3 5 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[188]=4 3 4 1 1 6 1 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[189]=3 2 2 3 2 8 6 7         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26585  target[190]=1 6 5 3 6 2 7 6 7 6 2 3 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[191]=8 0 0 4 0 8 7 4         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[192]=4 9 5 9 3 7 6 5         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[193]=5 5 3 4 4 9 8 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[194]=2 3 5 8 9 8 0 8 9 5 1 1 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[195]=1 6 8 4 8 0 9 2         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[196]=3 6 9 9 7 3 3 2 4 1 3 4 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26586  target[197]=2 5 0 9 4 8 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26587  target[198]=4 4 6 6 9 4 4 6         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26587  target[199]=5 4 3 7 0 1 3 1         
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26587  ===============================================
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26599  =======datafile header info:rnn_exmpales/digits/digit_offline.nc==============
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26599  numDims:2
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26599  inputSize:1
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26599  maxSeqs:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26599  numSequences:200
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[0]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[1]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[2]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[3]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[4]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[5]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[6]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[7]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[8]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[9]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[10]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[11]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[12]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26602  seq[13]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[14]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[15]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[16]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[17]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[18]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[19]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[20]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[21]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[22]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[23]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[24]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[25]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[26]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[27]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[28]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[29]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26605  seq[30]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[31]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[32]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[33]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[34]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[35]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[36]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[37]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[38]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[39]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[40]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[41]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[42]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[43]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[44]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[45]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[46]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[47]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[48]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[49]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[50]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[51]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[52]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[53]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[54]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[55]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26606  seq[56]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[57]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[58]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[59]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[60]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[61]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[62]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[63]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[64]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26607  seq[65]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26613  seq[66]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26613  seq[67]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26613  seq[68]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26613  seq[69]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26614  seq[70]=64 512 
+org.click.media.rnn.DataHeader INFO  2021-01-23 16:12:26614  seq[71]=64 512 
