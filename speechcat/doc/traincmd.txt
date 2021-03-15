@@ -1,5 +1,0 @@
-wavrawfile:
-rnn_exmpales/phoneme_transcription/phoneme_transcription_raw.config
-
-digitrawfile:
-
